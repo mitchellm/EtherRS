@@ -1,4 +1,0 @@
-EtherRS
-=======
-
-PHP impl. RSPS

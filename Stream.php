@@ -1,7 +1,13 @@
 <?php
 Class Stream {
 	public $currentOffset = 1;
-	public $array = array();
+	public $array = array(), $bit_mask_out = array();
+
+    public function __construct() {
+        for($x = 0; $x < 32; $x++) {
+            $this->bit_mask_out[$x] = (1 << $x) - 1;
+        }
+    }
 
     public function getUnsignedShort() {
         $this->currentOffset += 2;
@@ -76,7 +82,88 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($val + 128);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
     }
-    
+
+    public function putLEShort($val) {
+        $this->array[$this->currentOffset++] = $this->toByte($val);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+    } 
+
+    public function putBits($numBits, $val) {
+        $bytes = ceil((double) $numBits / 8) + 1;
+        $bytePos = $this->currentOffset >> 3;
+        $bitOffset = 8 - ($this->currentOffset & 7);
+        $this->currentOffset += $numBits;
+
+        for(; $numBits < $this->currentOffset; $this->currentOffset = 8) {
+            $this->array[$bytePos] &= ~$this->bit_mask_out[$bitOffset];
+            $this->array[$bytePos++] |= ($val >>  ($numBits-$this->currentOffset)) & $this->bit_mask_out[$bitOffset];
+            $numBits -= $bitOffset;
+        }
+
+        if($numBit == $bitOffset) {
+            $this->array[$bytePos] &= ~$this->bit_mask_out[$bitOffset];
+            $this->array[$bytePos] |= $val &  $this->bit_mask_out[$bitOffset];
+        } else {
+            $this->array[$bytePos] &= ~($this->bit_mask_out[$numBits] << ($bitOffset - $numBits));
+            $this->array[$bytePos] |= ($val & $this->bit_mask_out[$numBits]) << ($bitOffset - $numBits);
+        }
+    }
+
+    public function putByteC($val) {
+        $this->array[$this->currentOffset++] = $this->toByte(-$val);
+    }
+
+    public function putInt1($val) {
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+        $this->array[$this->currentOffset++] = $this->toByte($val);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
+    }
+
+    public function putInt2($val) {
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
+        $this->array[$this->currentOffset++] = $this->toByte($val);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+    }
+
+    public function putLEInt($val) {
+        $this->array[$this->currentOffset++] = $this->toByte($val);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
+    }
+
+    public function putByteA($val) {
+        $this->array[$this->currentOffset++] = $this->toByte($val + 128);
+    }
+
+    public function putByteS($val) {
+        $this->array[$this->currentOffset++] = $this->toByte(128 - $val);
+    }    
+
+    public function putTriByte($val) {
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
+        $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+        $this->array[$this->currentOffset++] = $this->toByte($val);
+    }
+
+    public function putSmart($val) {
+        if($val >= 128) {
+            putShort($val + 32768);
+        } else {
+            putByte(toByte($val));
+        }
+    }
+
+    public function putSignedSmart($val) {
+        if($val >= 128) {
+            putShort($val + 49152);
+        } else {
+            putByte(toByte($val + 64));
+        }
+    }
+
     public function putString($s) {
     	$max = currentOffset + strlen($s);
     	for($i = $this->currentOffset; $i < $max; $i++) {

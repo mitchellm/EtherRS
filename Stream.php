@@ -133,11 +133,7 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
     }
-
-    public function putByteA($val) {
-        $this->array[$this->currentOffset++] = $this->toByte($val + 128);
-    }
-
+    
     public function putByteS($val) {
         $this->array[$this->currentOffset++] = $this->toByte(128 - $val);
     }    

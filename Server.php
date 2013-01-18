@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Mitchell Murphy
+ * @version 1.0.0
+ */
 function __autoload($class_name) {
 	require_once $class_name . '.php';
 }

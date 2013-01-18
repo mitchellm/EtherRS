@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Mitchell Murphy
+ * @version 1.0.0
+ */
 Class Stream {
 	public $currentOffset = 1;
 	public $array = array(), $bit_mask_out = array();
@@ -133,7 +137,7 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
     }
-    
+
     public function putByteS($val) {
         $this->array[$this->currentOffset++] = $this->toByte(128 - $val);
     }    

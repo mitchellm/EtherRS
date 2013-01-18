@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Mitchell Murphy
+ * @version 1.0.0
+ */
 class ClientHandler extends Server {
 	public $clients = array();
 

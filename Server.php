@@ -11,7 +11,7 @@ $server->run();
 
 class Server {
 	private $server_sock, $client_sock, $port = 43594, $host = '127.0.0.1';
-	protected $clienthandler, $stream;
+	protected $clienthandler, $stream, $player;
 
 	public function __construct() {
 		$this->stream = new Stream();
@@ -26,7 +26,8 @@ class Server {
 				$listener = socket_listen($this->server_sock);
 				$this->client_sock = socket_accept($this->server_sock);
 				$index = $this->clienthandler->addClient($this->client_sock);
-				$this->clienthandler->process($index);
+				$plr = $this->clienthandler->getClient($index);
+				$plr->process();
 			} catch(Exception $e) {
 				$this->log($e->getMessage());
 			}

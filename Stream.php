@@ -13,6 +13,14 @@ Class Stream {
         }
     }
 
+    public function packData($resource) {
+        $string = "";
+        foreach ($resource as $chr) {
+            $string .= chr($chr);
+        }
+        return $string;
+    }
+
     public function getUnsignedShort() {
         $this->currentOffset += 2;
         return (($this->array[$this->currentOffset - 2] & 0xff) << 8) + ($this->array[$this->currentOffset - 1] & 0xff);

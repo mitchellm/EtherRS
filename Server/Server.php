@@ -80,13 +80,18 @@ class Server {
 	/**
 	 *
 	 * Start the server
-	 *
+	 * 
 	 */
 	private function start() {
+		socket_set_nonblock($this->socket);
 		while($this->socket) {
-			$client = socket_accept($this->socket);
-			$this->playerHandler->addClient($client, $this);
-			usleep(100000);
+			$secb4 = time();
+			$client = @socket_accept($this->socket);
+			if(!($client == false)) {
+				$this->playerHandler->addClient($client, $this);
+			}
+			$diff = time() - $secb4;
+			usleep(600000 - $diff);
 		}
 	}
 

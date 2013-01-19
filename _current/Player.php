@@ -27,6 +27,9 @@ class Player extends Server {
 			$this->log("Login ID Validated!", $debug);
 		}
 
+
+		$this->log($this->stream->currentOffset);
+
 		$namePart = $this->stream->getUnsignedByte();
 		$this->log("namePart: " . $namePart, $debug);
 		for($x = 0; $x < 8; $x++) {

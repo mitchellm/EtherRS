@@ -39,6 +39,7 @@ Class Stream {
 
     public function clear() {
         $this->setStream(array());
+        $this->currentOffset = 1;
     }
 
     public function getStream() {

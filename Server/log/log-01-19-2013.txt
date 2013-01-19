@@ -63,3 +63,1501 @@
 [SERVER] Player handler loaded
 [SERVER] Player Chat loaded
 [SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Updating players!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 2 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 3 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 4 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 5 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 6 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 7 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 8 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 9 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 10 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 11 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 12 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 13 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 14 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 15 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 16 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 17 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 18 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 19 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 20 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 21 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 22 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 23 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 24 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 25 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 26 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 27 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 28 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 29 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 30 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 31 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 32 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 33 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 34 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 35 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 36 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 37 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 38 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 39 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 40 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 41 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 42 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 43 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 44 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 45 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 46 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 47 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 48 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 49 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 50 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 51 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 52 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 53 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 54 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 55 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 56 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 57 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 58 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 59 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 60 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 61 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 62 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 63 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 64 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 65 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 66 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 67 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 68 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 69 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 70 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 71 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 72 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 73 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 74 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 75 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 76 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 77 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 78 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 79 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 80 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 81 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 82 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 83 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 84 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 85 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 86 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 87 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 88 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 89 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 90 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 91 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 92 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 93 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 94 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 95 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 96 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 97 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 98 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 99 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 100 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 2 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 3 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 4 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 5 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 6 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 7 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 8 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 9 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 10 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 11 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 12 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 13 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 14 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Client 15 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Client 1 has connected!
+[SERVER] Unexpected login type 0
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Client 1 has connected!
+[SERVER] Expected login Id 14 from client.
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Client 1 has connected!
+[SERVER] Unexpected login type 0
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Client 1 has connected!
+[SERVER] Unexpected login type 0
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] cycled!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] 14
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] 14
+[SERVER] 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] 14
+[SERVER] 
+[SERVER] 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] 14
+[SERVER] 2
+[SERVER] 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 93999998.41
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 75999998.43
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 181999998.1
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 12999998.97
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 28593074
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 183999998
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 161999998
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 182999998.06
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] SERVER SESSION KEY: 114999998.29
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 27999998.99
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 166999998.12
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 103999998.65
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 119999998.21
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 123999998.15
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 50999998.61
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 70999998.97
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 144999998.28
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 166999998.22
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 131999998.15
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 81999998.91
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 100999998.66
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 68999998.39
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 166999998.09
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 133999998.01
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 138999998.39
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 107999998.63
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 125999998.46
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 177999998.22
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 56999998.69
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 134999998.21
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 16999998.99
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 101999998.79
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 101999998.52
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] SERVER SESSION KEY: 109999998.28
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] SERVER SESSION KEY: 72999998.34
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 49999998.84
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] SERVER SESSION KEY: 89999998.67
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 103999998.32
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 104999998.68
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] SERVER SESSION KEY: 139999998.34
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 56999998.73
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 184999998.14
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 38758676
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 126999998.24
+[SERVER] Expected login Id 14 from client.
+[SERVER] SERVER SESSION KEY: 63999998.51
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 182999998.08
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 15195465
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 35999998.83
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 140999998.26
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 93836199
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 83999998.25
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Client 1 has connected!
+[SERVER] 2
+[SERVER] 
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 90999998.15
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 747601
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 129999998.21
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 121999998.66
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] 
+[SERVER] SERVER SESSION KEY: 77999998.53
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 104999998.76
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 82999998.36
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 65381970
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 158999998.12
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 109999998.64
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 112999998.22
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 82999998.63
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 73679378
+[SERVER] =========================================
+[SERVER] OUT CURRENT OFFSET: 12
+[SERVER] IN CURRENT OFFSET: 71
+[SERVER] SERVER SESSION KEY: 149999998.22
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 134999998.16
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 89999998.91
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 56599715
+[SERVER] =========================================
+[SERVER] FAILED
+[SERVER] OUT CURRENT OFFSET: 12
+[SERVER] IN CURRENT OFFSET: 71
+[SERVER] SERVER SESSION KEY: 168999998.15
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 102999998.89
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 108999998.86
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 119999998.4
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 22417613
+[SERVER] =========================================
+[SERVER] OUT CURRENT OFFSET: 12
+[SERVER] IN CURRENT OFFSET: 71
+[SERVER] SERVER SESSION KEY: 111999998.65
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 52999998.75
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 146999998.04
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 61096228
+[SERVER] =========================================
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 101999998.18
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 55999998.86
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 100999998.02
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 175999998.13
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 37620763
+[SERVER] =========================================
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 59999998.96
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 18233847
+[SERVER] =========================================
+[SERVER] OUT CURRENT OFFSET: 12
+[SERVER] IN CURRENT OFFSET: 71
+[SERVER] SERVER SESSION KEY: 99999998.42
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 81999998.59
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 107999998.72
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] OUT CURRENT OFFSET: 1
+[SERVER] IN CURRENT OFFSET: 1
+[SERVER] SERVER SESSION KEY: 110999998.34
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 168999998.22
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] 
+[SERVER] LoginType: 0
+[SERVER] Unexpected login type 0
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 38999998.98
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 25718811
+[SERVER] =========================================
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 103999998.95
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 52286334
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 74999998.88
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 99999998.62
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 90380357
+[SERVER] =========================================
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 117999998.69
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 73705264
+[SERVER] =========================================
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 83999998.71
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 90277013
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 137999998.31
+[SERVER] Expected login Id 14 from client.
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules
+[SERVER] SERVER SESSION KEY: 114999998.58
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 16
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 69755240
+[SERVER] =========================================
+[SERVER] SERVER SESSION KEY: 130999998.13
+[SERVER] Login ID Validated!
+[SERVER] 2
+[SERVER] namePart: 0
+[SERVER] WRITING SESSION KEY: 8
+[SERVER] F
+[SERVER] LoginType: 18
+[SERVER] LPKSIZE: 70 _ 30
+[SERVER] Stream STR:   
+[SERVER] WRITING SOMETHING: 3
+[SERVER] Username: asd
+[SERVER] Password: asd
+[SERVER] UID: 21755922
+[SERVER] =========================================

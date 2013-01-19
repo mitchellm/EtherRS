@@ -17,20 +17,16 @@ class PlayerHandler extends \Server\Server {
 	}
 
 	public function addClient($socket, \Server\Server $server) {
-		$server->inStream->clear();
-		$this->players[] = $socket;
-		$index = count($this->players);
-		$this->log("Client " . $index . " has connected!");
-
-		$debug = false;
-		$socket = $this->players[$index - 1];
-
+		$debug = true;
 		$returnCode = 2;
 		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
 		$clientSessionKey = 0;
 
+		$this->log("SERVER SESSION KEY: " . $serverSessionKey, $debug);
+
 		$data = socket_read($socket, 2, PHP_BINARY_READ);
 		$byte_array = unpack('C*', $data);
+		$server->inStream->clear();
 		$server->inStream->setStream($byte_array);
 
 		if($server->inStream->getUnsignedByte() != 14) {
@@ -40,31 +36,38 @@ class PlayerHandler extends \Server\Server {
 			$this->log("Login ID Validated!", $debug);
 		}
 
+		$this->log($server->inStream->currentOffset);
+
 		$namePart = $server->inStream->getUnsignedByte();
+		$this->log("namePart: " . $namePart, $debug);
 		for($x = 0; $x < 8; $x++) {
 			socket_write($socket, chr(0));
 		}
 		socket_write($socket, chr(0));
 
-		$server->inStream->clear();
-		$server->inStream->putLong($serverSessionKey);
+		$server->outStream->clear();
+		$server->outStream->putLong($serverSessionKey);
 
-		$stream = $server->inStream->getStream();
-		$string = $this->packData($stream);
+		$stream = $server->outStream->getStream();
+		$string = $server->outStream->packData($stream);
 
-		socket_write($socket, $string);
+		$ssk = socket_write($socket, $string);
+		$this->log("WRITING SESSION KEY: " . $ssk, $debug);
 
 		$server->inStream->setCurrentOffset(1);
 
 		$data = socket_read($socket, 2, PHP_BINARY_READ);
+		$this->log($data);
 		$byte_array = unpack('C*', $data);
 		$server->inStream->setStream($byte_array);
-
+		
 		$loginType = $server->inStream->getUnsignedByte();
+		
+		$this->log("LoginType: " . $loginType, $debug);
 		if($loginType != 16 && $loginType != 18) {
 			$this->log("Unexpected login type " . $loginType);
 			return;
-		}
+		} 
 
 		$loginPacketSize = $server->inStream->getUnsignedByte();
 		$loginEncryptPacketSize = $loginPacketSize - (36 + 1 + 1 + 2);
@@ -72,6 +75,8 @@ class PlayerHandler extends \Server\Server {
 			$this->log("Zero RSA packet size", $debug);
 			return;
 		}
+
+		$this->log("LPKSIZE: " . $loginPacketSize . " _ " . $loginEncryptPacketSize, $debug);
 
 		$data = socket_read($socket, $loginPacketSize, PHP_BINARY_READ);
 		$byte_array = unpack('C*', $data);
@@ -110,15 +115,22 @@ class PlayerHandler extends \Server\Server {
 		$username = strtolower($server->inStream->getString());
 		$password = $server->inStream->getString();
 
-		$server->inStream->clear();
-		$server->inStream->putByte(2);
-		$server->inStream->putByte(0);
-		$server->inStream->putByte(0);
+		$server->outStream->clear();
+		$server->outStream->putByte(2);
+		$server->outStream->putByte(0);
+		$server->outStream->putByte(0);
 
-		$stream = $server->inStream->getStream();
-		$string = $this->packData($stream);
+		$stream = $server->outStream->getStream();
+		$string = $server->outStream->packData($stream);
 
-		socket_write($socket, $string);
+		$this->log("Stream STR: " . $string, $debug);
+
+		$this->log("WRITING SOMETHING: " . socket_write($socket, $string), $debug);
+
+		$this->log("Username: " . $username, $debug);
+		$this->log("Password: " . $password, $debug);
+		$this->log("UID: " . $uid, $debug);
+		$this->log("=========================================", $debug);
 	}
 
 	public function packData($resource) {

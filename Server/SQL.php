@@ -1,3 +1,4 @@
+<?php
 namespace Server;
 
 require_once(__DIR__ . '/config.Server.php');
@@ -59,3 +60,4 @@ class SQL extends Server {
 	 	return $this->conn;
 	 }
 }
+?>

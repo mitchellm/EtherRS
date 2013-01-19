@@ -96,8 +96,10 @@ class Server {
 	}
 
 	/**
-	* The sequence of a single server cycle
-	*/
+	 * 
+	 * The sequence of a single server cycle
+	 * 
+	 */
 	private function cycle() {
 	 	//Listen for and process a new client, runs 10 times per cycle. Limited to prevent abuse 
 		for($i = 0; $i < 10; $i++) {

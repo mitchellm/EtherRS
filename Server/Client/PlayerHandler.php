@@ -15,6 +15,11 @@ class PlayerHandler extends \Server\Server {
 
 	public function __construct() {}
 
+	/**
+	 * 
+	 * Add a client to the handler
+	 * 
+	 */
 	public function add($socket, \Server\Server $server) {
 		$this->check();
 		$player = new Player($socket, $this->active_sessions, $server);
@@ -29,7 +34,12 @@ class PlayerHandler extends \Server\Server {
 		return $this->active_sessions;
 	}
 
-	private function check() {
+	/**
+	 *
+	 * Remove all null players
+	 * 
+	 */
+	protected function check() {
 		foreach($this->players as $key => $player) {
 			if(is_null($player)) 
 				continue;

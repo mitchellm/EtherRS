@@ -10,8 +10,9 @@ namespace Server\Client;
 */
 
 class Player extends \Server\Server {
-	protected $connection, $session, $server;
+	protected $session, $server;
 	protected $lastPacket;
+	public $connection;
 
 	public function __construct($socket, $active_session, \Server\Server $server) {
 		$this->connection = $socket;
@@ -22,6 +23,8 @@ class Player extends \Server\Server {
 
 	private function read($bytes) {
 		$data = socket_read($this->connection, $bytes, PHP_BINARY_READ);
+		if($data > 0 && $data != false) 
+			$this->lastPacket = time();
 		$data = unpack('C*', $data);
 		return $data;
 	}

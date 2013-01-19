@@ -15,9 +15,31 @@ class PlayerHandler extends \Server\Server {
 
 	public function __construct() {}
 
-	public function addClient($socket, \Server\Server $server) {
+	public function add($socket, \Server\Server $server) {
+		$this->check();
+		$player = new Player($socket, $this->active_sessions, $server);
 		$this->active_sessions++;
-		$this->players[] = new Player($socket, $this->active_sessions, $server);
+		for($x = 0; $x < count($this->players); $x++) {
+			if(is_null($players[$x])) {
+				$this->players[$x] = $player;
+				return $this->active_sessions;
+			}
+		}
+		$this->players[] = $player;
+		return $this->active_sessions;
+	}
+
+	private function check() {
+		foreach($this->players as $key => $player) {
+			if(is_null($player)) 
+				continue;
+
+			@socket_send($player->connection, " ", 1, MSG_OOB);
+			if(socket_last_error($player->connection) != 0) {
+				$player = null;
+				$this->active_sessions--;
+			}
+		}
 	}
 }
 ?>

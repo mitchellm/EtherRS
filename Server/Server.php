@@ -89,7 +89,7 @@ class Server {
 			$cycleStart = time();
 
 			$this->cycle();
-			
+
 			$cycleElapsed = time() - $cycleStart;
 			usleep((CYCLE_TIME * 1000) - $cycleElapsed);
 		}
@@ -103,11 +103,9 @@ class Server {
 		for($i = 0; $i < 10; $i++) {
 			$client = @socket_accept($this->socket);
 			if(!($client == false)) {
-				$this->playerHandler->addClient($client, $this);
-				//$this->log("Client accepted");
+				$this->playerHandler->add($client, $this);
 			}
 		}
-
 	}
 
 	/**

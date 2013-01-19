@@ -17,12 +17,11 @@ class PlayerHandler extends \Server\Server {
 	}
 
 	public function addClient($socket, \Server\Server $server) {
-		$debug = true;
+		socket_set_block($socket);
+		$debug = $server->getDebug();
 		$returnCode = 2;
 		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
 		$clientSessionKey = 0;
-
-		$this->log("SERVER SESSION KEY: " . $serverSessionKey, $debug);
 
 		$data = socket_read($socket, 2, PHP_BINARY_READ);
 		$byte_array = unpack('C*', $data);
@@ -32,14 +31,10 @@ class PlayerHandler extends \Server\Server {
 		if($server->inStream->getUnsignedByte() != 14) {
 			$this->log("Expected login Id 14 from client.");
 			return;
-		} else {
-			$this->log("Login ID Validated!", $debug);
 		}
 
-		$this->log($server->inStream->currentOffset);
 
 		$namePart = $server->inStream->getUnsignedByte();
-		$this->log("namePart: " . $namePart, $debug);
 		for($x = 0; $x < 8; $x++) {
 			socket_write($socket, chr(0));
 		}
@@ -52,18 +47,15 @@ class PlayerHandler extends \Server\Server {
 		$string = $server->outStream->packData($stream);
 
 		$ssk = socket_write($socket, $string);
-		$this->log("WRITING SESSION KEY: " . $ssk, $debug);
 
 		$server->inStream->setCurrentOffset(1);
 
 		$data = socket_read($socket, 2, PHP_BINARY_READ);
-		$this->log($data);
 		$byte_array = unpack('C*', $data);
 		$server->inStream->setStream($byte_array);
 		
 		$loginType = $server->inStream->getUnsignedByte();
 		
-		$this->log("LoginType: " . $loginType, $debug);
 		if($loginType != 16 && $loginType != 18) {
 			$this->log("Unexpected login type " . $loginType);
 			return;
@@ -75,8 +67,6 @@ class PlayerHandler extends \Server\Server {
 			$this->log("Zero RSA packet size", $debug);
 			return;
 		}
-
-		$this->log("LPKSIZE: " . $loginPacketSize . " _ " . $loginEncryptPacketSize, $debug);
 
 		$data = socket_read($socket, $loginPacketSize, PHP_BINARY_READ);
 		$byte_array = unpack('C*', $data);
@@ -123,14 +113,7 @@ class PlayerHandler extends \Server\Server {
 		$stream = $server->outStream->getStream();
 		$string = $server->outStream->packData($stream);
 
-		$this->log("Stream STR: " . $string, $debug);
-
-		$this->log("WRITING SOMETHING: " . socket_write($socket, $string), $debug);
-
-		$this->log("Username: " . $username, $debug);
-		$this->log("Password: " . $password, $debug);
-		$this->log("UID: " . $uid, $debug);
-		$this->log("=========================================", $debug);
+		socket_write($socket, $string);
 	}
 
 	public function packData($resource) {

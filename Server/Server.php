@@ -27,11 +27,10 @@ class Server {
 		if(!extension_loaded('sockets')) {
 			throw new \Exception('You need sockets enabled to use this!');
 		}
-		$this->log('Server initialized');
+		$this->log('EtherRS running and attempting to bind and listen on port ' . SERVER_PORT . '...');
 		$this->socket = @socket_create(AF_INET, SOCK_STREAM, 0);
 		$bind = @socket_bind($this->socket, 0, SERVER_PORT);
 		$listen = @socket_listen($this->socket);
-		
 		if(!$this->socket || !$bind || !$listen) {
 			throw new \Exception('Could not bind to ' . SERVER_PORT);
 		}
@@ -74,7 +73,7 @@ class Server {
 			$this->modules[$module] = new $class();
 		}
 
-		$this->log('Finished loading modules');
+		$this->log('Finished loading all server modules.');
 	}
 
 	/**
@@ -83,15 +82,17 @@ class Server {
 	 * 
 	 */
 	private function start() {
+		$cycleTimed = 0;
 		socket_set_nonblock($this->socket);
 		while($this->socket) {
+			$cycleTimed++;
 			$secb4 = time();
 			$client = @socket_accept($this->socket);
 			if(!($client == false)) {
 				$this->playerHandler->addClient($client, $this);
 			}
 			$diff = time() - $secb4;
-			usleep(600000 - $diff);
+			usleep((CYCLE_TIME * 1000) - $diff);
 		}
 	}
 
@@ -124,6 +125,17 @@ class Server {
 	 */
 	public function getInstream() {
 		return $this->inStream;
+	}
+
+	/**
+	 *
+	 * Get the current debug configuration
+	 *
+	 * @return Debug
+	 *
+	 */
+	public function getDebug() {
+		return DEBUG_CONFIG;
 	}
 
 	/**

@@ -8,7 +8,6 @@ namespace Server\Client;
 * @version GIT: $Id:$
 * @link https://github.com/mitchellm/EtherRS/
 */
-
 class Player extends \Server\Server {
 	protected $session, $server;
 	protected $lastPacket;
@@ -133,7 +132,13 @@ class Player extends \Server\Server {
 		$password = $this->server->inStream->getString();
 
 		$this->server->outStream->clear();
-		$this->server->outStream->putByte(2);
+		if(true) {
+			$return = 2;
+		} else {
+			$return = 3;
+		}
+
+		$this->server->outStream->putByte($return);
 		$this->server->outStream->putByte(0);
 		$this->server->outStream->putByte(0);
 

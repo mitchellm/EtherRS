@@ -1,6 +1,6 @@
 <?php
 namespace Server;
-
+use Client\PlayerHandler;
 /**
 * @category RSPS
 * @package EtherRS
@@ -18,7 +18,7 @@ require_once('Client/Player.php');
 
 class Server {
 	protected $socket, $bytes, $raw;
-	protected $outStream;
+	protected $outStream, $inStream;
 
 	private $playerHandler, $player;
 
@@ -40,7 +40,7 @@ class Server {
 		$this->outStream = new Stream();
 		$this->inStream = new Stream();
 		$this->playerHandler = new Client\PlayerHandler();
-		
+
 		$this->loadModules();
 		$this->start();
 	}

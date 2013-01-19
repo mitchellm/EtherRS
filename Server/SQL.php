@@ -36,7 +36,7 @@ class SQL extends Server {
 		}
 		$sql = '';
 		foreach($columns as $column) {
-			$sql .= '`' , $column . '` = ?';
+			$sql .= '`' , $column . '` = ? AND ';
 		}
 		$sql = substr($sql, 0, -5);
 		$sql = 'WHERE ' . $sql;

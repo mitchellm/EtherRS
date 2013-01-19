@@ -27,11 +27,10 @@ class PlayerHandler extends \Server\Server {
 		for($x = 0; $x < count($this->players); $x++) {
 			if(is_null($players[$x])) {
 				$this->players[$x] = $player;
-				return $this->active_sessions;
+				return;
 			}
 		}
 		$this->players[] = $player;
-		return $this->active_sessions;
 	}
 
 	/**

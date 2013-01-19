@@ -104,7 +104,7 @@ class Server {
 			$client = @socket_accept($this->socket);
 			if(!($client == false)) {
 				$this->playerHandler->addClient($client, $this);
-				$this->log("Client accepted");
+				//$this->log("Client accepted");
 			}
 		}
 

@@ -2921,3 +2921,10 @@
 [SERVER] Player Chat loaded
 [SERVER] Finished loading all server modules.
 [SERVER] Client accepted
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Client accepted
+[SERVER] Client accepted
+[SERVER] Client accepted
+[SERVER] Client accepted

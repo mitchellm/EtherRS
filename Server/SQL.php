@@ -47,4 +47,15 @@ class SQL extends Server {
 		
 		return $rs['rows'];
 	}
+	
+	/**
+	 *
+	 * Get the PDO instance
+	 *
+	 * @return PDO object
+	 *
+	 */
+	 public function getConn() {
+	 	return $this->conn;
+	 }
 }

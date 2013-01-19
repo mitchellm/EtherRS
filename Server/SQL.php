@@ -14,4 +14,37 @@ class SQL extends Server {
 		}
 		$this->log('SQL initialized');
 	}
+	
+	/**
+	 *
+	 * Get the number of rows from a certain table based on column and value.
+	 *
+	 * @param  string $table   The table to select from -- Be careful, we can't properly parameterize these.
+	 * @param  array  $columns The column sto select with -- We can't parameterize these either!
+	 * @param  array  $values  The values we need.
+	 *
+	 * @return int
+	 *
+	 */
+	public function numRows($table, array $columns, array $values) {
+		if($this->conn == false) {
+			$this->log(__METHOD__ . ': No SQL connection');
+			return false;
+		}
+		if(count($columns) != count($values)) {
+			throw new \Exception(__METHOD__ . ': Unmatching column and value arrays')
+		}
+		$sql = '';
+		foreach($columns as $column) {
+			$sql .= '`' , $column . '` = ?';
+		}
+		$sql = substr($sql, 0, -5);
+		$sql = 'WHERE ' . $sql;
+		$sql = 'SELECT COUNT(*) as `rows` FROM ' . $table . ' WHERE ' . $sql;
+		$this->conn->prepare($sql);
+		$this->conn->execute($values);
+		$rs = $this->conn->fetch(\PDO::FETCH_ASSOC);
+		
+		return $rs['rows'];
+	}
 }

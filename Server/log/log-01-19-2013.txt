@@ -2928,3 +2928,43 @@
 [SERVER] Client accepted
 [SERVER] Client accepted
 [SERVER] Client accepted
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100.00066666667%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100%!
+[SERVER] [WARNING]: Server load: 100.00016666667%!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.

@@ -11,6 +11,7 @@ namespace Server\Client;
 
 class Player extends \Server\Server {
 	protected $connection, $session, $server;
+	protected $lastPacket;
 
 	public function __construct($socket, $active_session, \Server\Server $server) {
 		$this->connection = $socket;
@@ -19,15 +20,23 @@ class Player extends \Server\Server {
 		$this->run();
 	}
 
+	private function read($bytes) {
+		$data = socket_read($this->connection, $bytes, PHP_BINARY_READ);
+		$data = unpack('C*', $data);
+		return $data;
+	}
+
+	public function write($s) {
+		socket_write($this->connection, $s);
+	}
+
 	private function run() {
 		socket_set_block($this->connection);
 		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
 		$clientSessionKey = 0;
 
-		$data = socket_read($this->connection, 2, PHP_BINARY_READ);
-		$byte_array = unpack('C*', $data);
-		$this->server->inStream->clear();
-		$this->server->inStream->setStream($byte_array);
+		$data = $this->read(2);
+		$this->server->inStream->setStream($data);
 
 		if($this->server->inStream->getUnsignedByte() != 14) {
 			$this->log("Expected login Id 14 from client.");
@@ -37,23 +46,19 @@ class Player extends \Server\Server {
 
 		$namePart = $this->server->inStream->getUnsignedByte();
 		for($x = 0; $x < 8; $x++) {
-			socket_write($this->connection, chr(0));
+			$this->write(chr(0));
 		}
-		socket_write($this->connection, chr(0));
+		$this->write(chr(0));
 
 		$this->server->outStream->clear();
 		$this->server->outStream->putLong($serverSessionKey);
 
 		$stream = $this->server->outStream->getStream();
-		$string = $this->server->outStream->packData($stream);
 
-		$ssk = socket_write($this->connection, $string);
+		$ssk = $this->write($stream);
 
-		$this->server->inStream->setCurrentOffset(1);
-
-		$data = socket_read($this->connection, 2, PHP_BINARY_READ);
-		$byte_array = unpack('C*', $data);
-		$this->server->inStream->setStream($byte_array);
+		$data = $this->read(2);
+		$this->server->inStream->setStream($data);
 		
 		$loginType = $this->server->inStream->getUnsignedByte();
 		
@@ -69,10 +74,8 @@ class Player extends \Server\Server {
 			return;
 		}
 
-		$data = socket_read($this->connection, $loginPacketSize, PHP_BINARY_READ);
-		$byte_array = unpack('C*', $data);
-		$this->server->inStream->setStream($byte_array);
-		$this->server->inStream->setCurrentOffset(1);
+		$data = $this->read($loginPacketSize);
+		$this->server->inStream->setStream($data);
 
 		$m1 = $this->server->inStream->getUnsignedByte();
 		$m2 = $this->server->inStream->getUnsignedShort();
@@ -81,6 +84,7 @@ class Player extends \Server\Server {
 			$this->log("Wrong login packet magic ID (expected 255, 317)" . $m1 . " _ " . $m2);
 			return;
 		}	
+
 		$lowMemVersion = $this->server->inStream->getUnsignedByte();
 		for($x = 0; $x < 9; $x++) {
 			$this->server->inStream->getInt();
@@ -112,9 +116,8 @@ class Player extends \Server\Server {
 		$this->server->outStream->putByte(0);
 
 		$stream = $this->server->outStream->getStream();
-		$string = $this->server->outStream->packData($stream);
 
-		socket_write($this->connection, $string);
+		$this->write($stream);
 	}
 }
 ?>

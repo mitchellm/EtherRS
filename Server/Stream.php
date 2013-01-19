@@ -43,7 +43,7 @@ Class Stream {
     }
 
     public function getStream() {
-        return $this->array;
+        return $this->packData($this->array);
     }
     
     public function getCurrentOffset() {
@@ -51,6 +51,7 @@ Class Stream {
     }
 
     public function setStream($arr) {
+        $this->currentOffset = 1;
         $this->array = $arr;
     }
 

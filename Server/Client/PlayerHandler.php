@@ -24,13 +24,10 @@ class PlayerHandler extends \Server\Server {
 		$this->check();
 		$player = new Player($socket, $this->active_sessions, $server);
 		$this->active_sessions++;
-		for($x = 0; $x < count($this->players); $x++) {
-			if(is_null($players[$x])) {
-				$this->players[$x] = $player;
-				return;
-			}
-		}
-		$this->players[] = $player;
+		$max = count($this->players) + 1;
+		for($x = 0; $x < $max; $x++);
+			$x == $max ? $this->players[$x] = $player : is_null($this->players[$x]) ? $this->players[$x] = $player : false;
+		$this->log("New client accepted successfully.");
 	}
 
 	/**

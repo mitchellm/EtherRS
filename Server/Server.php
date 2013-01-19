@@ -32,6 +32,7 @@ class Server {
 		$this->socket = @socket_create(AF_INET, SOCK_STREAM, 0);
 		$bind = @socket_bind($this->socket, 0, SERVER_PORT);
 		$listen = @socket_listen($this->socket);
+		socket_set_nonblock($this->socket);
 		if(!$this->socket || !$bind || !$listen) {
 			throw new \Exception('Could not bind to ' . SERVER_PORT);
 		}
@@ -84,7 +85,6 @@ class Server {
 	 */
 	private function start() {
 		$cycleTimed = 0;
-		socket_set_nonblock($this->socket);
 		while($this->socket) {
 			$cycleStart = time();
 

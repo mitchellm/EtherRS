@@ -59,3 +59,7 @@
 [SERVER] Player Chat loaded
 [SERVER] Finished loading modules
 [SERVER] Client 1 has connected!
+[SERVER] Server initialized
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading modules

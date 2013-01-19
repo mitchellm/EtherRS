@@ -21,6 +21,13 @@ class Player extends \Server\Server {
 		$this->run();
 	}
 
+	/**
+	 * 
+	 * Read data from client
+	 * 
+	 * @param int $bytes Amount of data to read to the buffer
+	 * 
+	 */
 	private function read($bytes) {
 		$data = socket_read($this->connection, $bytes, PHP_BINARY_READ);
 		if($data > 0 && $data != false) 
@@ -29,10 +36,22 @@ class Player extends \Server\Server {
 		return $data;
 	}
 
+	/**
+	 *
+	 * Send data to a socket
+	 * 
+	 * @param mixed $s Data to be sent
+	 * 
+	 */
 	public function write($s) {
 		socket_write($this->connection, $s);
 	}
 
+	/**
+	 * 
+	 * Entire login method. Follows STD protocol.
+	 * 
+	 */
 	private function run() {
 		socket_set_block($this->connection);
 		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));

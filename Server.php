@@ -2,19 +2,12 @@
 namespace Server;
 
 /**
-* An implementation of a RuneScape private server in PHP.
-*
-* PHP version 5
-*
-* LICENSE: PEAR gave me aids.
-*
-* @category Video game servers
+* @category RSPS
 * @package EtherRS
-* @author David Harris <lolidunno@live.co.uk>
-* @copyright 2012 David Harris
-* @license http://fuckoffpear.com/ PEAR is gay 2012
+* @author David Harris <lolidunno@live.co.uk>, Mitchell Murphy <mitchell@fl3x.co>
+* @copyright 2013 EtherRS
 * @version GIT: $Id:$
-* @link https://github.com/xxOrpheus/EtherRS
+* @link https://github.com/mitchellm/EtherRS/
 */
 
 chdir(__DIR__);

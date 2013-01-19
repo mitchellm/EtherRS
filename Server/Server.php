@@ -14,12 +14,13 @@ chdir(__DIR__);
 require_once('config.Server.php');
 require_once('Stream.php');
 require_once('Client/PlayerHandler.php');
+require_once('Client/Player.php');
 
 class Server {
 	protected $socket, $bytes, $raw;
 	protected $outStream;
 
-	private $playerHandler;
+	private $playerHandler, $player;
 
 	private $modules;
 
@@ -85,15 +86,28 @@ class Server {
 		$cycleTimed = 0;
 		socket_set_nonblock($this->socket);
 		while($this->socket) {
-			$cycleTimed++;
-			$secb4 = time();
+			$cycleStart = time();
+
+			$this->cycle();
+
+			$cycleElapsed = time() - $cycleStart;
+			usleep((CYCLE_TIME * 1000) - $cycleElapsed);
+		}
+	}
+
+	/**
+	* The sequence of a single server cycle
+	*/
+	private function cycle() {
+	 	//Listen for and process a new client, runs 10 times per cycle. Limited to prevent abuse 
+		for($i = 0; $i < 10; $i++) {
 			$client = @socket_accept($this->socket);
 			if(!($client == false)) {
 				$this->playerHandler->addClient($client, $this);
+				$this->log("Client accepted");
 			}
-			$diff = time() - $secb4;
-			usleep((CYCLE_TIME * 1000) - $diff);
 		}
+
 	}
 
 	/**

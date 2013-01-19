@@ -2847,3 +2847,77 @@
 [SERVER] Player handler loaded
 [SERVER] Player Chat loaded
 [SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Client accepted.
+[SERVER] Client accepted.
+[SERVER] Client accepted.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded.
+[SERVER] Player loaded.
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Player loaded.
+[SERVER] Client accepted.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded.
+[SERVER] Player loaded.
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Player loaded.
+[SERVER] Player loaded.
+[SERVER] Player loaded.
+[SERVER] Player loaded.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded.
+[SERVER] Player loaded.
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Player loaded.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded.
+[SERVER] Player loaded.
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded.
+[SERVER] Connected l0l and added!
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player handler loaded.
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Connected l0l and added!
+[SERVER] Client accepted
+[SERVER] Connected l0l and added!
+[SERVER] Client accepted
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Accepted session 1
+[SERVER] Client accepted
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Accepted session 
+[SERVER] Client accepted
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Accepted session 1
+[SERVER] Client accepted
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] Client accepted

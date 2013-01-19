@@ -1,8 +1,4 @@
 <?php
-/**
- * @author Mitchell Murphy
- * @version 1.0.0
- */
 require_once("Server.php");
 class Player extends Server {
 	protected $socket, $stream;
@@ -12,7 +8,7 @@ class Player extends Server {
 		$this->stream = new Stream();
 	}
 
-	public function process() {
+	public function handleConnection() {
 		$debug = true;
 		$returnCode = 2;
 		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));

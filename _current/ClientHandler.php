@@ -9,8 +9,6 @@ class ClientHandler extends Server {
 
 	public function addClient($socket) {
 		$this->clients[] = new Player($socket);
-
-		/*$socket;*/
 		$idx = count($this->clients);
 		$this->log("Client " . $idx . " has connected!");
 		return $idx - 1;
@@ -21,6 +19,10 @@ class ClientHandler extends Server {
 	}
 
 	public function getClients() {
+		return $this->clients;
+	}
+
+	public function getCount() {
 		return count($this->clients);
 	}
 }

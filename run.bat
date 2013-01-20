@@ -1,7 +1,7 @@
 @echo off
 REM Change this to your PHP directory
-cd C:\path\to\php
+cd C:\xampp\php
 
 REM Change this to your run script.
-php C:\path\to\EtherRS\run.php
+php C:\Users\mitchell\Documents\GitHub\EtherRS\run.php
 pause

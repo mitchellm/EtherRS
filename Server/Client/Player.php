@@ -1,5 +1,6 @@
 <?php
 namespace Server\Client;
+use Cryption\ISAAC as ISAAC;
 
 /**
  * @category RSPS
@@ -10,10 +11,15 @@ namespace Server\Client;
  * @link https://github.com/mitchellm/EtherRS/
  */
 
+require_once('Cryption/ISAAC.php');
+
 class Player extends \Server\Server {
-	protected $session, $server;
+	protected $session, $server, $ISAAC;
 	protected $lastPacket;
 	public $connection;
+	protected $decryptor, $encryptor;
+
+	protected $username, $password;
 
 	public function __construct($socket, $active_session, \Server\Server $server) {
 		$this->connection = $socket;
@@ -29,7 +35,7 @@ class Player extends \Server\Server {
 	 * @param int $bytes Amount of data to read to the buffer
 	 * 
 	 */
-	private function read($bytes) {
+	protected function read($bytes) {
 		$data = socket_read($this->connection, $bytes, PHP_BINARY_READ);
 		if($data > 0 && $data != false) 
 			$this->lastPacket = time();
@@ -44,8 +50,43 @@ class Player extends \Server\Server {
 	 * @param mixed $s Data to be sent
 	 * 
 	 */
-	public function write($s) {
+	protected function write($s) {
 		socket_write($this->connection, $s);
+	}
+
+
+	/**
+	* Set the username of the player object
+	* 
+	* @param $username
+	*/
+	protected function setUsername($username) {
+		$this->username = $username;
+	}
+
+	/**
+	* Set the password of the player object
+	* 
+	* @param $username
+	*/
+	protected function setPassword($password) {
+		$this->password = $password;
+	}
+
+	/*
+	* Sets the decryptor for the server
+	*
+	*/
+	public function setDecryptor($isaacKey) {
+		$this->decryptor = new ISAAC($isaacKey);
+	}
+
+	/*
+	* Sets the encryptor for the server
+	*
+	*/
+	public function setEncryptor($isaacKey) {
+		$this->encryptor = new ISAAC($isaacKey);
 	}
 
 	/**
@@ -55,8 +96,7 @@ class Player extends \Server\Server {
 	 */
 	private function run() {
 		socket_set_block($this->connection);
-		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
-		$clientSessionKey = 0;
+		$serverHalf = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
 
 		$data = $this->read(2);
 		$this->server->inStream->setStream($data);
@@ -74,7 +114,7 @@ class Player extends \Server\Server {
 		$this->write(chr(0));
 
 		$this->server->outStream->clear();
-		$this->server->outStream->putLong($serverSessionKey);
+		$this->server->outStream->putLong($serverHalf);
 
 		$stream = $this->server->outStream->getStream();
 
@@ -126,12 +166,16 @@ class Player extends \Server\Server {
 			$this->log("Encrypt packet Id was " . $tmp . " but expected 10");
 		}
 
-		$clientSessionKey = $this->server->inStream->getLong();
-		$serverSessionKey = $this->server->inStream->getLong();
+		$clientHalf = $this->server->inStream->getLong();
+		$serverHalf = $this->server->inStream->getLong();
 		$uid = $this->server->inStream->getInt();
 
 		$username = strtolower($this->server->inStream->getString());
 		$password = $this->server->inStream->getString();
+
+		$this->setUsername($username);
+		$this->setPassword($password);
+
 		$this->log($username . ' has joined ' . SERVER_NAME);
 		$this->server->outStream->clear();
 		if(true) {
@@ -147,6 +191,18 @@ class Player extends \Server\Server {
 		$stream = $this->server->outStream->getStream();
 
 		$this->write($stream);
+
+		$isaacSeed = array();
+		$isaacSeed[] = intval($clientHalf >> 32);
+		$isaacSeed[] = intval($clientHalf);
+		$isaacSeed[] = intval($serverHalf >> 32);
+		$isaacSeed[] = intval($serverHalf >> 32);
+ 
+		$this->setDecryptor($isaacSeed);
+		for($i = 0; $i < count($isaacSeed); $i++) {
+			$isaacSeed[$i] += 50;
+		}
+		$this->setEncryptor($isaacSeed);
 	}
 }
 ?>

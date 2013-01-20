@@ -1,0 +1,26 @@
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] asdasd has joined EtherRS
+[SERVER] 72245379 97999998.5
+[SERVER] asdasd has joined EtherRS
+[SERVER] 44000026 71999998.5
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] asdasd has joined EtherRS
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] asdasd has joined EtherRS
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] asdasd has joined EtherRS
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] asdasd has joined EtherRS

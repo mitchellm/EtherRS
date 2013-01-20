@@ -17,12 +17,10 @@ require_once('config.Server.php');
 require_once('Stream.php');
 require_once('Client/PlayerHandler.php');
 require_once('Client/Player.php');
-require_once('Cryption/ISAAC.php');
 
 class Server {
 	protected $socket, $bytes, $raw;
 	protected $outStream, $inStream;
-	protected $decryptor, $encryptor;
 
 	private $playerHandler, $player;
 
@@ -154,23 +152,6 @@ class Server {
 	 */
 	public function getDebug() {
 		return DEBUG_CONFIG;
-	}
-
-
-	/*
-	* Sets the decryptor for the server
-	*
-	*/
-	public function setDecryptor($isaacKey) {
-		$this->decryptor = new ISAAC($isaacKey);
-	}
-
-	/*
-	* Sets the encryptor for the server
-	*
-	*/
-	public function setEncryptor($isaacKey) {
-		$this->encryptor = new ISAAC($isaacKey);
 	}
 
 	/**

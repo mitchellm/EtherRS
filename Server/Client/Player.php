@@ -78,7 +78,7 @@ class Player extends \Server\Server {
 	*
 	*/
 	public function setDecryptor($isaacKey) {
-		$this->decryptor = new ISAAC($isaacKey);
+		$this->decryptor = new \Server\Cryption\ISAAC($isaacKey);
 	}
 
 	/*
@@ -86,7 +86,7 @@ class Player extends \Server\Server {
 	*
 	*/
 	public function setEncryptor($isaacKey) {
-		$this->encryptor = new ISAAC($isaacKey);
+		$this->encryptor = new \Server\Cryption\ISAAC($isaacKey);
 	}
 
 	/**

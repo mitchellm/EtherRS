@@ -73,7 +73,7 @@ class Server {
 			if(!class_exists($class)) {
 				throw new \Exception('Module ' . $class . ' failed to load -- Does the class name match the file name?');
 			}
-			$this->modules[$module] = new $class();
+			$this->modules[$module] = new $class($this);
 		}
 
 		$this->log('Finished loading all server modules.');

@@ -26,7 +26,7 @@ class PlayerHandler extends \Server\Server {
 		$player = new Player($socket, $this->active_sessions, $server);
 		$this->active_sessions++;
 		$this->players[] = $player;
-		//$this->log("New client accepted successfully.");
+		$server->handleModules('__onConnect', $socket, $this);
 	}
 
 	/**

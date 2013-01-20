@@ -1,14 +1,15 @@
 <?php
 namespace Server;
 use Client\PlayerHandler;
+
 /**
-* @category RSPS
-* @package EtherRS
-* @author David Harris <lolidunno@live.co.uk>, Mitchell Murphy <mitchell@fl3x.co>
-* @copyright 2013 EtherRS
-* @version GIT: $Id:$
-* @link https://github.com/mitchellm/EtherRS/
-*/
+ * @category RSPS
+ * @package EtherRS
+ * @author David Harris <lolidunno@live.co.uk>, Mitchell Murphy <mitchell@fl3x.co>
+ * @copyright 2013 EtherRS
+ * @version GIT: $Id:$
+ * @link https://github.com/mitchellm/EtherRS/
+ */
 
 chdir(__DIR__);
 require_once('config.Server.php');

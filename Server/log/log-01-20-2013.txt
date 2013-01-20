@@ -2816,3 +2816,93 @@
 [SERVER] NEGATIVE: 2684354558
 [SERVER] POSITIVE: 1
 [SERVER] NEGATIVE: 2684354558
+[SERVER] POSITIVE: 1
+[SERVER] NEGATIVE: 536870910
+[SERVER] -3889823501
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] -3889823501
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] -3889823501
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 536870905
+[SERVER] 0
+[SERVER] 7
+[SERVER] 6
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 536870905
+[SERVER] 0
+[SERVER] 7
+[SERVER] 6
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 536870905
+[SERVER] 0
+[SERVER] 7
+[SERVER] 6
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] 536870905
+[SERVER] 0
+[SERVER] 7
+[SERVER] 6
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 906412908
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 906412908
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] 906412908
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 906412908
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 906412908
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar has logged in from 127.0.0.1:56396
+[SERVER] a has logged in from 127.0.0.1:56401
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:56459
+[SERVER] a has logged in from 127.0.0.1:56464
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:56569
+[SERVER] a has logged in from 127.0.0.1:56601
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:56636

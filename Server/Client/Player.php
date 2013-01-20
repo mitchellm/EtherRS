@@ -1,6 +1,5 @@
 <?php
 namespace Server\Client;
-use \Server\Cryption\ISAAC as ISAAS;
 
 require_once('Stream.php');
 require(__DIR__ . "\..\Cryption\ISAAC.php");
@@ -63,6 +62,7 @@ class Player extends \Server\Server {
 	 * 
 	 */
 	private function read($bytes) {
+		$this->inStream->clear();
 		$data = socket_read($this->connection, $bytes, PHP_BINARY_READ);
 		if($data > 0 && $data != false) 
 			$this->lastPacket = time();
@@ -78,6 +78,7 @@ class Player extends \Server\Server {
 	 * 
 	 */
 	public function write($s) {
+		$this->outStream->clear();
 		socket_write($this->connection, $s);
 	}
 
@@ -157,7 +158,6 @@ class Player extends \Server\Server {
 
 		$encryptSize = $this->inStream->getUnsignedByte();
 		if($loginEncryptPacketSize != $encryptSize) {
-			$this->log($this->inStream->getCurrentOffset());
 			$this->log("Encrypted size mismatch! It's: " . $encryptSize);
 			return;
 		}
@@ -194,7 +194,9 @@ class Player extends \Server\Server {
 	private function login() {
 		$response = 0;
 
-		$exists = $this->sql->getCount("players", array('username', 'password'), array($this->getUsername(), $this->getPassword()));
+		$exists = $this->sql->getCount("players", array('username', 'password'), 
+			array($this->getUsername(), $this->getPassword()));
+
 		if($exists == 1) {
 			$response = 2;
 		} else {
@@ -212,23 +214,18 @@ class Player extends \Server\Server {
 			}
 		}		
 
-		$this->outStream->putByte($response);
-		$this->outStream->putByte(0);
-		$this->outStream->putByte(0);
+		$this->outStream->putByte($response)->putByte(0)->putByte(0);
 		$stream = $this->outStream->getStream();
 		$this->write($stream);
 
-		$this->outStream->clear();
 		$this->outStream->putHeader($this->getEncryptor(), 249)->putByteA(0)->putLEShortA(0);
 		$stream = $this->outStream->getStream();
 		$this->write($stream);
 
-		$this->outStream->clear();
 		$this->outStream->putHeader($this->getEncryptor(), 107);
 		$stream = $this->outStream->getStream();
 		$this->write($stream);
 
-		$this->outStream->clear();
 		$this->outStream->putHeader($this->getEncryptor(), 73)->putShortA(400)->putShort(400);
 		$stream = $this->outStream->getStream();
 		$this->write($stream);

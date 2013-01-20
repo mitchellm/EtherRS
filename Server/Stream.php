@@ -155,7 +155,7 @@ Class Stream {
     }
 
     public function putHeader(\Server\Cryption\ISAAC $isaac, $packet) {
-        $this->putByte($packet + $isaac->getNextKey());
+        $this->putByte($packet + $isaac->rand());
         return $this;
     }
 

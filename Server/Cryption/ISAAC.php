@@ -1,203 +1,112 @@
 <?php
-namespace Server\Cryption\ISAAC;
+namespace Server\Cryption;
 
 class ISAAC {
-	protected $memory = array(), $results = array();
-	protected $count, $accumulator, $lastResult, $counter;
+    private $m, $a, $b, $c; // internal state
+    public  $r;   // current chunk of results
 
-	public function __construct($seed)
-	{
-		//for(int x = 0; x < seed.length; x++)
-			//System.out.println(seed[x]);
-		$this->$memory = array_fill(0, 256, 0);
-		$this->$results = array_fill(0, 256, 0);
-		for($i = 0; $i < 4; $i++) {
-			$this->$results[$i] = $seed[$i];
-		}
-		$this->initializeKeySet();
-	}
+    public function isaac()
+    {
+        $c = ++$this->c;     // c gets incremented once per 256 results
+        $b = $this->b += $c; // then combined with b
+        $a = $this->a;
 
-		function urshift($x, $n){
-			$mask = 0x40000000;
-			if ($x < 0){
-				$x &= 0x7FFFFFFF;
-				$mask = $mask >> ($n-1);
-				$ret = ($x >> $n) | $mask;
-				$ret = str_pad(decbin($ret), 32, '0', STR_PAD_LEFT);
-				$ret[0] = '1';
-				$ret = bindec($ret);
-			}
-			else{
-				$ret = (int)$x >> (int)$n;
-			}
-			return $ret;
-		}
+        $m =& $this->m;
+        $r = array();
 
-	public function getNextKey()
-	{
-		if($this->count-- == 0)
-		{
-			$this->isaac();
-			$this->count = 255;
-		}
-		//System.out.println("Key "  + results[count]);
-		return $this->results[$this->count];
-		//return 1;
-	}
+        for ($i = 0; $i < 256; ++$i) {
+            $x = $m[$i];
+            switch ($i & 3) {
+            case 0: $a ^= ($a << 13); break;
+            case 1: $a ^= ($a >>  6) & 0x03ffffff; break;
+            case 2: $a ^= ($a <<  2); break;
+            case 3: $a ^= ($a >> 16) & 0x0000ffff; break;
+            }
+            $a += $m[$i ^ 128]; $a &= 0xffffffff;
+            $m[$i] = $y = ($m[($x >>  2) & 255] + $a + $b) & 0xffffffff;
+            $r[$i] = $b = ($m[($y >> 10) & 255] + $x) & 0xffffffff;
+        }
 
-	private function isaac()
-	{
-		$this->lastResult += ++$this->counter;
-		for($i = 0; $i < 256; $i++)
-		{
-			$j = $this->memory[$i];
-			if(($i & 3) == 0)
-				$this->accumulator ^= $this->accumulator << 13;
-			else
-			if(($i & 3) == 1)
-				$this->accumulator ^= $this->urshift($this->accumulator, 6);
-			else
-			if(($i & 3) == 2)
-				$this->accumulator ^= $this->accumulator << 2;
-			else
-			if(($i & 3) == 3)
-				$this->accumulator ^= $this->urshift($this->accumulator, 16);
-			$accumulator += $this->memory[$i + 128 & 0xff];
-			$k;
-			$this->memory[i] = $k = $this->memory[($j & 0x3fc) >> 2] + $this->accumulator + $this->lastResult;
-			$this->results[i] = $this->lastResult = $this->memory[($k >> 8 & 0x3fc) >> 2] + $j;
-		}
+        $this->a = $a;
+        $this->b = $b;
+        $this->c = $c;
+        $this->r = $r;
+    }
 
-	}
+    public function rand()
+    {
+        if (empty($this->r)) $this->isaac();
+        return array_pop($this->r);
+    }
 
-	private function initializeKeySet()
-	{
-		$golden_ratio = 0x9e3779b9;
-		$l = $golden_ratio;
-		$i1 = $golden_ratio;
-		$j1 = $golden_ratio;
-		$k1 = $golden_ratio;
-		$l1 = $golden_ratio;
-		$i2 = $golden_ratio;
-		$j2 = $golden_ratio;
-		$k2 = $golden_ratio;
-		for($i = 0; $i < 4; $i++)
-		{
-			$l ^= $i1 << 11;
-			$k1 += $l;
-			$i1 += $j1;
-			$i1 ^= $this->urshift($j1, 2);
-			$l1 += $i1;
-			$j1 += $k1;
-			$j1 ^= $k1 << 8;
-			$i2 += $j1;
-			$k1 += $l1;
-			$k1 ^= $this->urshift($l1, 16);
-			$j2 += $k1;
-			$l1 += $i2;
-			$l1 ^= $i2 << 10;
-			$k2 += $l1;
-			$i2 += $j2;
-			$i2 ^= $this->urshift($j2, 4);
-			$l += $i2;
-			$j2 += $k2;
-			$j2 ^= $k2 << 8;
-			$i1 += $j2;
-			$k2 += $l;
-			$k2 ^= $this->urshift($l, 9);
-			$j1 += $k2;
-			$l += $i1;
-		}
+    private static function mix( &$a, &$b, &$c, &$d, &$e, &$f, &$g, &$h )
+    {
+        $a ^= ($b << 11);              $d += $a; $b += $c;
+        $b ^= ($c >>  2) & 0x3fffffff; $e += $b; $c += $d;
+        $c ^= ($d <<  8);              $f += $c; $d += $e;
+        $d ^= ($e >> 16) & 0x0000ffff; $g += $d; $e += $f;
+        $e ^= ($f << 10);              $h += $e; $f += $g;
+        $f ^= ($g >>  4) & 0x0fffffff; $a += $f; $g += $h;
+        $g ^= ($h <<  8);              $b += $g; $h += $a;
+        $h ^= ($a >>  9) & 0x007fffff; $c += $h; $a += $b;
+        // 64-bit PHP does something weird on integer overflow; avoid it
+        $a &= 0xffffffff; $b &= 0xffffffff; $c &= 0xffffffff; $d &= 0xffffffff;
+        $e &= 0xffffffff; $f &= 0xffffffff; $g &= 0xffffffff; $h &= 0xffffffff;
+    }
 
-		for($j = 0; $j < 256; $j += 8)
-		{
-			$l += $this->results[$j];
-			$i1 += $this->results[$j + 1];
-			$j1 += $this->results[$j + 2];
-			$k1 += $this->results[$j + 3];
-			$l1 += $this->results[$j + 4];
-			$i2 += $this->results[$j + 5];
-			$j2 += $this->results[$j + 6];
-			$k2 += $this->results[$j + 7];
-			$l ^= $i1 << 11;
-			$k1 += $l;
-			$i1 += $j1;
-			$i1 ^= $this->urshift($j1, 2);
-			$l1 += $i1;
-			$j1 += $k1;
-			$j1 ^= $k1 << 8;
-			$i2 += $j1;
-			$k1 += $l1;
-			$k1 ^= $this->urshift($l1, 16);
-			$j2 += $k1;
-			$l1 += $i2;
-			$l1 ^= $i2 << 10;
-			$k2 += $l1;
-			$i2 += $j2;
-			$i2 ^= $this->urshift($j2, 4);
-			$l += $i2;
-			$j2 += $k2;
-			$j2 ^= $k2 << 8;
-			$i1 += $j2;
-			$k2 += $l;
-			$k2 ^= $this->urshift($l, 9);;
-			$j1 += $k2;
-			$l += $i1;
-			$this->memory[$j] = $l;
-			$this->memory[$j + 1] = $i1;
-			$this->memory[$j + 2] = $j1;
-			$this->memory[$j + 3] = $k1;
-			$this->memory[$j + 4] = $l1;
-			$this->memory[$j + 5] = $i2;
-			$this->memory[$j + 6] = $j2;
-			$this->memory[$j + 7] = $k2;
-		}
+    public function __construct ( $seed = null )
+    {
+        $this->a = $this->b = $this->c = 0;
+        $this->m = array_fill(0, 256, 0);
+        $m =& $this->m;
 
-		for($k = 0; $k < 256; $k += 8)
-		{
-			$l += $this->memory[$k];
-			$i1 += $this->memory[$k + 1];
-			$j1 += $this->memory[$k + 2];
-			$k1 += $this->memory[$k + 3];
-			$l1 += $this->memory[$k + 4];
-			$i2 += $this->memory[$k + 5];
-			$j2 += $this->memory[$k + 6];
-			$k2 += $this->memory[$k + 7];
-			$l ^= $i1 << 11;
-			$k1 += $l;
-			$i1 += $j1;
-			$i1 ^= $this->urshift($j1, 2);
-			$l1 += $i1;
-			$j1 += $k1;
-			$j1 ^= $k1 << 8;
-			$i2 += $j1;
-			$k1 += $l1;
-			$k1 ^= $this->urshift($l1, 16);
-			$j2 += $k1;
-			$l1 += $i2;
-			$l1 ^= $i2 << 10;
-			$k2 += $l1;
-			$i2 += $j2;
-			$i2 ^= $this->urshift($j2, 4);
-			$l += $i2;
-			$j2 += $k2;
-			$j2 ^= $k2 << 8;
-			$i1 += $j2;
-			$k2 += $l;
-			$k2 ^= $this->urshift($l, 9);
-			$j1 += $k2;
-			$l += $i1;
-			$this->memory[$k] = $l;
-			$this->memory[$k + 1] = $i1;
-			$this->memory[$k + 2] = $j1;
-			$this->memory[$k + 3] = $k1;
-			$this->memory[$k + 4] = $l1;
-			$this->memory[$k + 5] = $i2;
-			$this->memory[$k + 6] = $j2;
-			$this->memory[$k + 7] = $k2;
-		}
+        $a = $b = $c = $d = $e = $f = $g = $h = 0x9e3779b9;  // golden ratio
 
-		$this->isaac();
-		$this->count = 256;
-	}
+        for ($i = 0; $i < 4; ++$i) {
+            ISAAC::mix($a, $b, $c, $d, $e, $f, $g, $h);      // scramble it
+        }
+
+        if ( isset($seed) ) {
+            if ( is_string($seed) ) {
+                // emulate casting char* to int* on a little-endian CPU
+                $seed = array_values(unpack("V256", pack("a1024", $seed)));
+            }
+
+            for($k = 0; $k < 256; $k++) {
+                if(!isset($seed[$k]))
+                        $seed[$k] = 0;
+            }
+
+            // initialize using the contents of $seed as the seed
+            for ($i = 0; $i < 256; $i += 8) {
+                @$a += $seed[$i  ]; $b += $seed[$i+1];
+                @$c += $seed[$i+2]; $d += $seed[$i+3];
+                @$e += $seed[$i+4]; $f += $seed[$i+5];
+                @$g += $seed[$i+6]; $h += $seed[$i+7];
+                ISAAC::mix($a, $b, $c, $d, $e, $f, $g, $h);
+                $m[$i  ] = $a; $m[$i+1] = $b; $m[$i+2] = $c; $m[$i+3] = $d;
+                $m[$i+4] = $e; $m[$i+5] = $f; $m[$i+6] = $g; $m[$i+7] = $h;
+            }
+
+            // do a second pass to make all of the seed affect all of $m
+            for ($i = 0; $i < 256; $i += 8) {
+                $a += $m[$i  ]; $b += $m[$i+1]; $c += $m[$i+2]; $d += $m[$i+3];
+                $e += $m[$i+4]; $f += $m[$i+5]; $g += $m[$i+6]; $h += $m[$i+7];
+                ISAAC::mix($a, $b, $c, $d, $e, $f, $g, $h);
+                $m[$i  ] = $a; $m[$i+1] = $b; $m[$i+2] = $c; $m[$i+3] = $d;
+                $m[$i+4] = $e; $m[$i+5] = $f; $m[$i+6] = $g; $m[$i+7] = $h;
+            }
+        }
+        else {
+            // fill in $m with messy stuff (does anyone really use this?)
+            for ($i = 0; $i < 256; $i += 8) {
+                ISAAC::mix($a, $b, $c, $d, $e, $f, $g, $h);
+                $m[$i  ] = $a; $m[$i+1] = $b; $m[$i+2] = $c; $m[$i+3] = $d;
+                $m[$i+4] = $e; $m[$i+5] = $f; $m[$i+6] = $g; $m[$i+7] = $h;
+            }
+        }
+
+        // fill in the first set of results
+        $this->isaac();
+    }
 }

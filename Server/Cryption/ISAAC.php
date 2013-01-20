@@ -46,8 +46,10 @@ class ISAAC {
 			$this->generateNextKeySet();
 			$this->keyArrayIdx = 255;
 		}
-
-		return $this->keySetArray[$this->keyArrayIdx];
+		$key = $this->keySetArray[$this->keyArrayIdx];
+		//echo "\n Key: " . $key . "\n";
+		//return $key;
+		return 1;
 	}
 
 	public function generateNextKeySet() {

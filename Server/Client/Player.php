@@ -2,6 +2,7 @@
 namespace Server\Client;
 use \Server\Cryption\ISAAC as ISAAS;
 
+require_once('Stream.php');
 require(__DIR__ . "\..\Cryption\ISAAC.php");
 /**
  * @category RSPS
@@ -13,7 +14,7 @@ require(__DIR__ . "\..\Cryption\ISAAC.php");
  */
 
 class Player extends \Server\Server {
-	protected $session, $server, $sql;
+	protected $session, $server, $sql, $inStream, $outStream;
 	protected $lastPacket;
 	protected $username, $password;
 	public $connection;
@@ -25,7 +26,33 @@ class Player extends \Server\Server {
 		$this->session = $active_session;
 		$this->server = $server;
 		$this->sql = $sql;
+
+		$this->outStream = new \Server\Stream();
+		$this->inStream = new \Server\Stream();
+
 		$this->run();
+	}
+
+	/**
+	 *
+	 * Get the current out stream
+	 *
+	 * @return Stream
+	 *
+	 */
+	public function getOutstream() {
+		return $this->outStream;
+	}
+
+	/**
+	 *
+	 * Get the current in stream
+	 *
+	 * @return Stream
+	 *
+	 */
+	public function getInstream() {
+		return $this->inStream;
 	}
 
 	/**
@@ -73,38 +100,38 @@ class Player extends \Server\Server {
 		$clientHalf = 0;
 
 		$data = $this->read(2);
-		$this->server->inStream->setStream($data);
+		$this->inStream->setStream($data);
 
-		if($this->server->inStream->getUnsignedByte() != 14) {
+		if($this->inStream->getUnsignedByte() != 14) {
 			$this->log("Expected login Id 14 from client.");
 			return;
 		}
 
 
-		$namePart = $this->server->inStream->getUnsignedByte();
+		$namePart = $this->inStream->getUnsignedByte();
 		for($x = 0; $x < 8; $x++) {
 			$this->write(chr(0));
 		}
 		$this->write(chr(0));
 
-		$this->server->outStream->clear();
-		$this->server->outStream->putLong($serverHalf);
+		$this->outStream->clear();
+		$this->outStream->putLong($serverHalf);
 
-		$stream = $this->server->outStream->getStream();
+		$stream = $this->outStream->getStream();
 
 		$ssk = $this->write($stream);
 
 		$data = $this->read(2);
-		$this->server->inStream->setStream($data);
+		$this->inStream->setStream($data);
 		
-		$loginType = $this->server->inStream->getUnsignedByte();
+		$loginType = $this->inStream->getUnsignedByte();
 		
 		if($loginType != 16 && $loginType != 18) {
 			$this->log("Unexpected login type " . $loginType);
 			return;
 		} 
 
-		$loginPacketSize = $this->server->inStream->getUnsignedByte();
+		$loginPacketSize = $this->inStream->getUnsignedByte();
 		$loginEncryptPacketSize = $loginPacketSize - (36 + 1 + 1 + 2);
 		if($loginEncryptPacketSize <= 0) {
 			$this->log("Zero RSA packet size", $debug);
@@ -112,48 +139,49 @@ class Player extends \Server\Server {
 		}
 
 		$data = $this->read($loginPacketSize);
-		$this->server->inStream->setStream($data);
+		$this->inStream->setStream($data);
 
-		$m1 = $this->server->inStream->getUnsignedByte();
-		$m2 = $this->server->inStream->getUnsignedShort();
+		$m1 = $this->inStream->getUnsignedByte();
+		$m2 = $this->inStream->getUnsignedShort();
 
 		if($m1 != 255 || $m2 != 317) {
 			$this->log("Wrong login packet magic ID (expected 255, 317)" . $m1 . " _ " . $m2);
 			return;
 		}	
 
-		$lowMemVersion = $this->server->inStream->getUnsignedByte();
+		$lowMemVersion = $this->inStream->getUnsignedByte();
 		for($x = 0; $x < 9; $x++) {
-			$this->server->inStream->getInt();
+			$this->inStream->getInt();
 		}
 		$loginEncryptPacketSize--;
 
-		$encryptSize = $this->server->inStream->getUnsignedByte();
+		$encryptSize = $this->inStream->getUnsignedByte();
 		if($loginEncryptPacketSize != $encryptSize) {
-			$this->log($this->server->inStream->getCurrentOffset());
+			$this->log($this->inStream->getCurrentOffset());
 			$this->log("Encrypted size mismatch! It's: " . $encryptSize);
 			return;
 		}
 
-		$tmp = $this->server->inStream->getUnsignedByte();
+		$tmp = $this->inStream->getUnsignedByte();
 		if($tmp != 10) {
 			$this->log("Encrypt packet Id was " . $tmp . " but expected 10");
 		}
 
-		$clientHalf = $this->server->inStream->getLong();
-		$serverHalf = $this->server->inStream->getLong();
-		$uid = $this->server->inStream->getInt();
+		$clientHalf = 53955325; //$this->inStream->getLong();
+		$this->inStream->getLong();
+		$serverHalf = $this->inStream->getLong();
+		$uid = $this->inStream->getInt();
 
-		$username = strtolower($this->server->inStream->getString());
-		$password = $this->server->inStream->getString();
+		$username = strtolower($this->inStream->getString());
+		$password = $this->inStream->getString();
 
 		$this->setUsername($username);
 		$this->setPassword($password);
 
-		$this->server->outStream->clear();
+		$this->outStream->clear();
 
 		$isaacSeed = array(intval($clientHalf >> 32), intval($clientHalf), intval($serverHalf >> 32), intval($serverHalf));
-
+		//$this->log($clientHalf . " " . $serverHalf);
 		$this->setDecryptor(new \Server\Cryption\ISAAC($isaacSeed));
 		for($i = 0; $i < count($isaacSeed); $i++) {
 			$isaacSeed[$i] += 50;
@@ -182,12 +210,27 @@ class Player extends \Server\Server {
 				$response = 5;
 				break;
 			}
-		}
+		}		
 
-		$this->server->outStream->putByte($response);
-		$this->server->outStream->putByte(0);
-		$this->server->outStream->putByte(0);
-		$stream = $this->server->outStream->getStream();
+		$this->outStream->putByte($response);
+		$this->outStream->putByte(0);
+		$this->outStream->putByte(0);
+		$stream = $this->outStream->getStream();
+		$this->write($stream);
+
+		$this->outStream->clear();
+		$this->outStream->putHeader($this->getEncryptor(), 249)->putByteA(0)->putLEShortA(0);
+		$stream = $this->outStream->getStream();
+		$this->write($stream);
+
+		$this->outStream->clear();
+		$this->outStream->putHeader($this->getEncryptor(), 107);
+		$stream = $this->outStream->getStream();
+		$this->write($stream);
+
+		$this->outStream->clear();
+		$this->outStream->putHeader($this->getEncryptor(), 73)->putShortA(400)->putShort(400);
+		$stream = $this->outStream->getStream();
 		$this->write($stream);
 
 		$this->server->handleModules('__onLogin', $this);
@@ -200,6 +243,15 @@ class Player extends \Server\Server {
 	protected function setDecryptor($isaac) {
 		$this->decryptor = $isaac;
 	}
+
+	protected function getEncryptor() {
+		return $this->encryptor;
+	}
+
+	protected function getDecryptor() {
+		return $this->decryptor;
+	}
+
 
 	public function getUsername() {
 		return $this->username;

@@ -2571,3 +2571,137 @@
 [SERVER] a has logged in from 127.0.0.1:57339
 [SERVER] a has logged in from 127.0.0.1:57340
 [SERVER] a has logged in from 127.0.0.1:57343
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar has logged in from 127.0.0.1:57879
+[SERVER] a has logged in from 127.0.0.1:57882
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:58198
+[SERVER] a has logged in from 127.0.0.1:58199
+[SERVER] a has logged in from 127.0.0.1:58204
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:58239
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar has logged in from 127.0.0.1:58404
+[SERVER] a has logged in from 127.0.0.1:58411
+[SERVER] a has logged in from 127.0.0.1:58416
+[SERVER] a has logged in from 127.0.0.1:58421
+[SERVER] a has logged in from 127.0.0.1:58426
+[SERVER] a has logged in from 127.0.0.1:58427
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 53955325 71999998.5
+[SERVER] a has logged in from 127.0.0.1:58526
+[SERVER] 77474953 108999998.5
+[SERVER] a has logged in from 127.0.0.1:58575
+[SERVER] 16020263.5 122999998.5
+[SERVER] a has logged in from 127.0.0.1:58580
+[SERVER] 51733442 92999998.5
+[SERVER] a has logged in from 127.0.0.1:58585
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 73053159.5 100999998.5
+[SERVER] a has logged in from 127.0.0.1:58655
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 53955325 78525723.5
+[SERVER] >åþ\"a has logged in from 127.0.0.1:58710
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] Unexpected login type 0
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 53955325 98999998.5
+[SERVER] a has logged in from 127.0.0.1:58868
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] 53955325 127999998.5
+[SERVER] a has logged in from 127.0.0.1:59060
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:59110
+[SERVER] a has logged in from 127.0.0.1:59111
+[SERVER] a has logged in from 127.0.0.1:59116
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:59159
+[SERVER] a has logged in from 127.0.0.1:59160
+[SERVER] a has logged in from 127.0.0.1:59161
+[SERVER] a has logged in from 127.0.0.1:59162
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:59183
+[SERVER] a has logged in from 127.0.0.1:59184
+[SERVER] a has logged in from 127.0.0.1:59185
+[SERVER] a has logged in from 127.0.0.1:59186
+[SERVER] a has logged in from 127.0.0.1:59194
+[SERVER] a has logged in from 127.0.0.1:59197
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:59322
+[SERVER] a has logged in from 127.0.0.1:59323
+[SERVER] a has logged in from 127.0.0.1:59324
+[SERVER] a has logged in from 127.0.0.1:59329
+[SERVER] a has logged in from 127.0.0.1:59342
+[SERVER] a has logged in from 127.0.0.1:59343
+[SERVER] a has logged in from 127.0.0.1:59344
+[SERVER] a has logged in from 127.0.0.1:59345
+[SERVER] a has logged in from 127.0.0.1:59348
+[SERVER] a has logged in from 127.0.0.1:59351
+[SERVER] a has logged in from 127.0.0.1:59352
+[SERVER] a has logged in from 127.0.0.1:59353
+[SERVER] a has logged in from 127.0.0.1:59356
+[SERVER] a has logged in from 127.0.0.1:59359
+[SERVER] a has logged in from 127.0.0.1:59360
+[SERVER] a has logged in from 127.0.0.1:59361
+[SERVER] a has logged in from 127.0.0.1:59362
+[SERVER] a has logged in from 127.0.0.1:59367
+[SERVER] a has logged in from 127.0.0.1:59368
+[SERVER] a has logged in from 127.0.0.1:59369
+[SERVER] a has logged in from 127.0.0.1:59370
+[SERVER] a has logged in from 127.0.0.1:59375
+[SERVER] a has logged in from 127.0.0.1:59376
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:59384
+[SERVER] a has logged in from 127.0.0.1:59386
+[SERVER] a has logged in from 127.0.0.1:59387
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] a has logged in from 127.0.0.1:59507
+[SERVER] a has logged in from 127.0.0.1:59508
+[SERVER] a has logged in from 127.0.0.1:59509

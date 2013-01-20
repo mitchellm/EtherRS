@@ -19,7 +19,7 @@ require_once("SQL.php");
 
 class Server {
 	protected $socket, $bytes, $raw;
-	protected $outStream, $inStream, $sql;
+	protected $sql;
 
 	protected $playerHandler, $player;
 
@@ -38,8 +38,6 @@ class Server {
 			throw new \Exception('Could not bind to ' . SERVER_PORT);
 		}
 
-		$this->outStream = new Stream();
-		$this->inStream = new Stream();
 		$this->playerHandler = new Client\PlayerHandler();
 		$this->sql = new SQL();
 
@@ -138,28 +136,6 @@ class Server {
 	 */
 	public function getModules() {
 		return $this->modules;
-	}
-
-	/**
-	 *
-	 * Get the current out stream
-	 *
-	 * @return Stream
-	 *
-	 */
-	public function getOutstream() {
-		return $this->outStream;
-	}
-
-	/**
-	 *
-	 * Get the current in stream
-	 *
-	 * @return Stream
-	 *
-	 */
-	public function getInstream() {
-		return $this->inStream;
 	}
 
 	/**

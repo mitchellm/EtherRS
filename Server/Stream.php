@@ -20,6 +20,11 @@ Class Stream {
         }
     }
 
+    public function putVariableShortPacketHeader($isaac, $val) {
+        $this->putHeader($isaac, $val);
+        $this->putShort(0);
+    }
+
     public function packData($resource) {
         $string = "";
         foreach ($resource as $chr) {
@@ -58,6 +63,7 @@ Class Stream {
 	public function putShort($i) {
         $this->array[$this->currentOffset++] = $this->toByte($i >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($i);
+        return $this;
     }
 
     public function toByte($val) {
@@ -70,6 +76,7 @@ Class Stream {
 
     public function putByte($i) {
     	$this->array[$this->currentOffset++] = $this->toByte($i);
+        return $this;
 	}
 
     public function putInt($i) {
@@ -77,6 +84,7 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($i >> 16);
         $this->array[$this->currentOffset++] = $this->toByte($i >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($i);
+        return $this;
     }
  
     public function putLong($l) {
@@ -88,25 +96,30 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($l >> 16);
         $this->array[$this->currentOffset++] = $this->toByte($l >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($l);
+        return $this;
     }
 
     public function putShortA($val) {
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($val + 128);
+        return $this;
     }
 
     public function putByteA($val) {
         $this->array[$this->currentOffset++] = $this->toByte($val + 128);
+        return $this;
     }
 
     public function putLEShortA($val) {
         $this->array[$this->currentOffset++] = $this->toByte($val + 128);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+        return $this;
     }
 
     public function putLEShort($val) {
         $this->array[$this->currentOffset++] = $this->toByte($val);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+        return $this;
     } 
 
     public function putBits($numBits, $val) {
@@ -128,10 +141,17 @@ Class Stream {
             $this->array[$bytePos] &= ~($this->bit_mask_out[$numBits] << ($bitOffset - $numBits));
             $this->array[$bytePos] |= ($val & $this->bit_mask_out[$numBits]) << ($bitOffset - $numBits);
         }
+        return $this;
+    }
+
+    public function putHeader(\Server\Cryption\ISAAC $isaac, $packet) {
+        $this->putByte($packet + $isaac->getNextKey());
+        return $this;
     }
 
     public function putByteC($val) {
         $this->array[$this->currentOffset++] = $this->toByte(-$val);
+        return $this;
     }
 
     public function putInt1($val) {
@@ -139,6 +159,7 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($val);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
+        return $this;
     }
 
     public function putInt2($val) {
@@ -146,6 +167,7 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
         $this->array[$this->currentOffset++] = $this->toByte($val);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
+        return $this;
     }
 
     public function putLEInt($val) {
@@ -153,16 +175,19 @@ Class Stream {
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 24);
+        return $this;
     }
 
     public function putByteS($val) {
         $this->array[$this->currentOffset++] = $this->toByte(128 - $val);
+        return $this;
     }    
 
     public function putTriByte($val) {
         $this->array[$this->currentOffset++] = $this->toByte($val >> 16);
         $this->array[$this->currentOffset++] = $this->toByte($val >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($val);
+        return $this;
     }
 
     public function putSmart($val) {
@@ -171,6 +196,7 @@ Class Stream {
         } else {
             putByte(toByte($val));
         }
+        return $this;
     }
 
     public function putSignedSmart($val) {
@@ -179,6 +205,7 @@ Class Stream {
         } else {
             putByte(toByte($val + 64));
         }
+        return $this;
     }
 
     public function putString($s) {
@@ -188,12 +215,13 @@ Class Stream {
     	}
     	$this->currentOffset += strlen($s);
         $this->array[$this->currentOffset++] = 10;
+        return $this;
     }
 
     public function getUnsignedByte() {
         return $this->array[$this->currentOffset++] & 0xff;
     }
- 
+
     public function get() {
         return $this->array[$this->currentOffset++];
     }

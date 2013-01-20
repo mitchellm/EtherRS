@@ -1,7 +1,6 @@
 <?php
 namespace Server;
 use Client\PlayerHandler;
-use Cryption\ISAAC;
 
 /**
  * @category RSPS
@@ -24,7 +23,7 @@ class Server {
 
 	private $playerHandler, $player;
 
-	private $modules;
+	private $modules = array();
 
 	public function __construct(array $args = null) {
 		if(!extension_loaded('sockets')) {
@@ -78,6 +77,24 @@ class Server {
 		}
 
 		$this->log('Finished loading all server modules.');
+	}
+
+	/**
+	 *
+	 * Handle all modules
+	 *
+	 * @param string $method_name Method name
+	 *
+	 */
+	public function handleModules($handler) {
+		$args = func_get_args();
+		$modules = $this->getModules();
+
+		foreach($modules as $module) {
+			if(method_exists($module, $handler)) {
+				$module->$handler($args);
+			}
+		}
 	}
 
 	/**

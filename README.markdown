@@ -1,3 +1,2 @@
-EtherRS
-#######
-## A RuneScape private server implementation in PHP
+# EtherRS
+### A RuneScape private server implementation in PHP

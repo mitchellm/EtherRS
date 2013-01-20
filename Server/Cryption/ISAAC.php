@@ -18,11 +18,21 @@ class ISAAC {
 		$this->initializeKeySet();
 	}
 
-	public function urshift($n, $s) {
-		return ($n >= 0) ? ($n >> $s) :
-			(($n & 0x7fffffff) >> $s) | 
-				(0x40000000 >> ($s - 1));
-	}  
+	function urshift($x, $n){
+		$mask = 0x40000000;
+		if ($x < 0){
+			$x &= 0x7FFFFFFF;
+			$mask = $mask >> ($n-1);
+			$ret = ($x >> $n) | $mask;
+			$ret    = str_pad(decbin($ret),    32, '0', STR_PAD_LEFT);
+			$ret[0] = '1';
+			$ret    = bindec($ret);
+		}
+		else{
+			$ret = (int)$x >> (int)$n;
+		}
+		return $ret;
+	}
 
 	public function getNextKey() {
 		if ($this->keyArrayIdx-- == 0) {

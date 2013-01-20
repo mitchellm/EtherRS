@@ -50,3 +50,8 @@
 [SERVER] asdasd has joined EtherRS
 [SERVER] asdasd has joined EtherRS
 [SERVER] asdasd has joined EtherRS
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] Player Chat loaded
+[SERVER] Finished loading all server modules.
+[SERVER] asdasd has logged in from 127.0.0.1:51182
+[SERVER] asdasd has logged in from 127.0.0.1:51189

@@ -1,13 +1,15 @@
 <?php
 namespace Server\Client;
+
 /**
-* @category RSPS
-* @package EtherRS
-* @author David Harris <lolidunno@live.co.uk>, Mitchell Murphy <mitchell@fl3x.co>
-* @copyright 2013 EtherRS
-* @version GIT: $Id:$
-* @link https://github.com/mitchellm/EtherRS/
-*/
+ * @category RSPS
+ * @package EtherRS
+ * @author David Harris <lolidunno@live.co.uk>, Mitchell Murphy <mitchell@fl3x.co>
+ * @copyright 2013 EtherRS
+ * @version GIT: $Id:$
+ * @link https://github.com/mitchellm/EtherRS/
+ */
+
 class Player extends \Server\Server {
 	protected $session, $server;
 	protected $lastPacket;
@@ -130,7 +132,7 @@ class Player extends \Server\Server {
 
 		$username = strtolower($this->server->inStream->getString());
 		$password = $this->server->inStream->getString();
-
+		$this->log($username . ' has joined ' . SERVER_NAME);
 		$this->server->outStream->clear();
 		if(true) {
 			$return = 2;

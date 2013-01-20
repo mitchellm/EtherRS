@@ -2,7 +2,9 @@
 namespace Server\Modules;
 
 class playerChat extends \Server\Server {
-	public function __construct() {
+	private $server;
+	
+	public function __construct(\Server\Server $server) {
 		$this->log('Player Chat loaded');
 	}
 }

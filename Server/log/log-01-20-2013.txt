@@ -2705,3 +2705,114 @@
 [SERVER] a has logged in from 127.0.0.1:59507
 [SERVER] a has logged in from 127.0.0.1:59508
 [SERVER] a has logged in from 127.0.0.1:59509
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] 6
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] 587
+[SERVER] 587
+[SERVER] 587
+[SERVER] 587
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -5783692692
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -5783692692
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -5783692692
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -5783692692
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -9113646137
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -9113646137
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -9113646137
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -9113646137
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] -9113646137
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] -9113646137
+[SERVER] 1
+[SERVER] 80
+[SERVER] 2
+[SERVER] -2
+[SERVER] -80
+[SERVER] 2
+[SERVER] -2
+[SERVER] -80
+[SERVER] 2
+[SERVER] 2684354558
+[SERVER] 2684354558
+[SERVER] POSITIVE: 2684354558
+[SERVER] NEGATIVE: 2684354558
+[SERVER] POSITIVE: 1
+[SERVER] NEGATIVE: 2684354558

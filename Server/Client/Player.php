@@ -233,6 +233,7 @@ class Player extends \Server\Server {
 		$stream = $this->outStream->getStream();
 		$this->write($stream);
 
+			
 		$this->server->handleModules('__onLogin', $this);
 	}
 

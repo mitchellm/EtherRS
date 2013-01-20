@@ -13,17 +13,18 @@ require(__DIR__ . "\..\Cryption\ISAAC.php");
  */
 
 class Player extends \Server\Server {
-	protected $session, $server;
+	protected $session, $server, $sql;
 	protected $lastPacket;
-	protected $username;
+	protected $username, $password;
 	public $connection;
 
 	protected $encryptor, $decryptor;
 
-	public function __construct($socket, $active_session, \Server\Server $server) {
+	public function __construct($socket, $active_session, \Server\Server $server, \Server\SQL $sql) {
 		$this->connection = $socket;
 		$this->session = $active_session;
 		$this->server = $server;
+		$this->sql = $sql;
 		$this->run();
 	}
 
@@ -51,6 +52,14 @@ class Player extends \Server\Server {
 	 */
 	public function write($s) {
 		socket_write($this->connection, $s);
+	}
+
+	public function setUsername($s) {
+		$this->username = $s;
+	}
+
+	public function setPassword($s) {
+		$this->password = $s;
 	}
 
 	/**
@@ -135,23 +144,13 @@ class Player extends \Server\Server {
 		$serverHalf = $this->server->inStream->getLong();
 		$uid = $this->server->inStream->getInt();
 
-		$this->username = strtolower($this->server->inStream->getString());
-		$this->password = $this->server->inStream->getString();
+		$username = strtolower($this->server->inStream->getString());
+		$password = $this->server->inStream->getString();
+
+		$this->setUsername($username);
+		$this->setPassword($password);
+
 		$this->server->outStream->clear();
-		if(true) {
-			$return = 2;
-		} else {
-			$return = 3;
-		}
-
-		$this->server->outStream->putByte($return);
-		$this->server->outStream->putByte(0);
-		$this->server->outStream->putByte(0);
-
-		$stream = $this->server->outStream->getStream();
-
-		$this->write($stream);
-		$this->server->handleModules('__onLogin', $this);
 
 		$isaacSeed = array(intval($clientHalf >> 32), intval($clientHalf), intval($serverHalf >> 32), intval($serverHalf));
 
@@ -160,6 +159,38 @@ class Player extends \Server\Server {
 			$isaacSeed[$i] += 50;
 		}
 		$this->setEncryptor(new \Server\Cryption\ISAAC($isaacSeed));
+
+		$this->login();
+	}
+
+	private function login() {
+		$response = 0;
+
+		$exists = $this->sql->getCount("players", array('username', 'password'), array($this->getUsername(), $this->getPassword()));
+		if($exists == 1) {
+			$response = 2;
+		} else {
+			$response = 3;
+		}
+
+		$players = $this->server->playerHandler->getPlayers();
+		foreach($players as $player) {
+			if($player == null) {
+				continue;
+			}
+			if($player->getUsername() == $this->getUsername()) {
+				$response = 5;
+				break;
+			}
+		}
+
+		$this->server->outStream->putByte($response);
+		$this->server->outStream->putByte(0);
+		$this->server->outStream->putByte(0);
+		$stream = $this->server->outStream->getStream();
+		$this->write($stream);
+
+		$this->server->handleModules('__onLogin', $this);
 	}
 
 	protected function setEncryptor($isaac) {
@@ -172,6 +203,10 @@ class Player extends \Server\Server {
 
 	public function getUsername() {
 		return $this->username;
+	}
+
+	public function getPassword() {
+		return $this->password;
 	}
 
 	public function getIP() {

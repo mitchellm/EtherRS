@@ -1,6 +1,5 @@
 <?php
 namespace Server;
-use Client\PlayerHandler;
 
 /**
  * @category RSPS
@@ -16,12 +15,13 @@ require_once('config.Server.php');
 require_once('Stream.php');
 require_once('Client/PlayerHandler.php');
 require_once('Client/Player.php');
+require_once("SQL.php");
 
 class Server {
 	protected $socket, $bytes, $raw;
-	protected $outStream, $inStream;
+	protected $outStream, $inStream, $sql;
 
-	private $playerHandler, $player;
+	protected $playerHandler, $player;
 
 	private $modules = array();
 
@@ -41,6 +41,7 @@ class Server {
 		$this->outStream = new Stream();
 		$this->inStream = new Stream();
 		$this->playerHandler = new Client\PlayerHandler();
+		$this->sql = new SQL();
 
 		$this->loadModules();
 		$this->start();
@@ -76,7 +77,7 @@ class Server {
 			$this->modules[$module] = new $class($this);
 		}
 
-		$this->log('Finished loading all server modules.');
+		$this->log('Finished loading all server modules, the server will continue running!');
 	}
 
 	/**
@@ -124,8 +125,9 @@ class Server {
 		for($i = 0; $i < 10; $i++) {
 			$client = @socket_accept($this->socket);
 			if(!($client == false)) {
-				$this->playerHandler->add($client, $this);
+				$this->playerHandler->add($client, $this, $this->sql);
 			}
+			$this->playerHandler->cycleEvent();
 		}
 	}
 

@@ -3,17 +3,24 @@ namespace Server\Cryption;
 
 class ISAAC {
 	protected $keyArrayIdx;
-	protected $keySetArray = array();
-	protected $cryptArray = array();
+	protected $keySetArray;
+	protected $cryptArray;
 	protected $cryptVar1;
 	protected $cryptVar2;
 	protected $cryptVar3;
 
 
 	public function __construct(array $ai) {
-		$this->cryptArray = array();
-		$this->keySetArray = array();
-		$this->keySetArray = $ai;
+		$this->cryptVar1 = 0;
+		$this->cryptVar2 = 0;
+		$this->cryptVar3 = 0;
+
+		$this->keySetArray = array_fill(0, 256, 0);
+		$this->cryptArray = array_fill(0, 256, 0);
+
+		for($x = 0; $x < count($ai); $x++) {
+			$this->keySetArray[$x] = $ai[$x];
+		} 
 
 		$this->initializeKeySet();
 	}

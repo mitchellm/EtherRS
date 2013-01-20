@@ -1,6 +1,8 @@
 <?php
 namespace Server\Client;
+use \Server\Cryption\ISAAC as ISAAS;
 
+require(__DIR__ . "\..\Cryption\ISAAC.php");
 /**
  * @category RSPS
  * @package EtherRS
@@ -15,6 +17,8 @@ class Player extends \Server\Server {
 	protected $lastPacket;
 	protected $username;
 	public $connection;
+
+	protected $encryptor, $decryptor;
 
 	public function __construct($socket, $active_session, \Server\Server $server) {
 		$this->connection = $socket;
@@ -56,8 +60,8 @@ class Player extends \Server\Server {
 	 */
 	private function run() {
 		socket_set_block($this->connection);
-		$serverSessionKey = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
-		$clientSessionKey = 0;
+		$serverHalf = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
+		$clientHalf = 0;
 
 		$data = $this->read(2);
 		$this->server->inStream->setStream($data);
@@ -75,7 +79,7 @@ class Player extends \Server\Server {
 		$this->write(chr(0));
 
 		$this->server->outStream->clear();
-		$this->server->outStream->putLong($serverSessionKey);
+		$this->server->outStream->putLong($serverHalf);
 
 		$stream = $this->server->outStream->getStream();
 
@@ -127,8 +131,8 @@ class Player extends \Server\Server {
 			$this->log("Encrypt packet Id was " . $tmp . " but expected 10");
 		}
 
-		$clientSessionKey = $this->server->inStream->getLong();
-		$serverSessionKey = $this->server->inStream->getLong();
+		$clientHalf = $this->server->inStream->getLong();
+		$serverHalf = $this->server->inStream->getLong();
 		$uid = $this->server->inStream->getInt();
 
 		$this->username = strtolower($this->server->inStream->getString());
@@ -148,6 +152,22 @@ class Player extends \Server\Server {
 
 		$this->write($stream);
 		$this->server->handleModules('__onLogin', $this);
+
+		$isaacSeed = array(intval($clientHalf >> 32), intval($clientHalf), intval($serverHalf >> 32), intval($serverHalf));
+
+		$this->setDecryptor(new \Server\Cryption\ISAAC($isaacSeed));
+		for($i = 0; $i < count($isaacSeed); $i++) {
+			$isaacSeed[$i] += 50;
+		}
+		$this->setEncryptor(new \Server\Cryption\ISAAC($isaacSeed));
+	}
+
+	protected function setEncryptor($isaac) {
+		$this->encryptor = $isaac;
+	}
+
+	protected function setDecryptor($isaac) {
+		$this->decryptor = $isaac;
 	}
 
 	public function getUsername() {

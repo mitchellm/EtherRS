@@ -42,6 +42,7 @@ class Server {
 
 		$this->loadModules();
 		$this->start();
+		$this->handleModules('__onLoad', $this);
 	}
 
 	/**
@@ -82,6 +83,7 @@ class Server {
 	 * Handle all modules
 	 *
 	 * @param string $method_name Method name
+	 * @version 1.2
 	 *
 	 */
 	public function handleModules($handler) {
@@ -90,10 +92,12 @@ class Server {
 
 		foreach($modules as $module) {
 			if(method_exists($module, $handler)) {
-				$module->$handler($args);
+				//$module->$handler($args);
+				call_user_func_array(array($module, $handler), $args);
 			}
 		}
 	}
+
 
 	/**
 	 *
@@ -135,17 +139,6 @@ class Server {
 	 */
 	public function getModules() {
 		return $this->modules;
-	}
-
-	/**
-	 *
-	 * Get the current debug configuration
-	 *
-	 * @return Debug
-	 *
-	 */
-	public function getDebug() {
-		return DEBUG_CONFIG;
 	}
 
 	/**

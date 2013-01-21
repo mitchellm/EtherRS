@@ -34,12 +34,20 @@ class PlayerHandler extends \Server\Server {
 	 * 
 	 */
 	protected function cycleEvent() {
-		for($x = 0; $x < count($this->players); $x++) {
+		$playerCount = count($this->players);
+		for($x = 0; $x < $playerCount; $x++) {
 			if(!isset($this->players[$x]))
 				continue;
 
 			if(is_null($this->players[$x])) 
 				continue;
+
+			if(time() - $this->players[$x]->getLastPacket() > 10) {
+				socket_close($this->players[$x]->getConnection());
+				$this->log('Closing ' . $this->players[$x]->getUsername() .'\'s connection');
+				unset($this->players[$x]);
+				continue;
+			}
 
 			@socket_send($this->players[$x]->connection, " ", 1, MSG_OOB);
 			if(socket_last_error($this->players[$x]->connection) != 0) {

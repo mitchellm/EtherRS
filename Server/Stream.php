@@ -11,8 +11,8 @@ namespace Server;
 */
 
 Class Stream {
-	public $currentOffset = 1;
-	public $array = array(), $bit_mask_out = array();
+    public $currentOffset = 1;
+    public $array = array(), $bit_mask_out = array();
 
     public function __construct() {
         for($x = 0; $x < 32; $x++) {
@@ -60,24 +60,24 @@ Class Stream {
         $this->array = $arr;
     }
 
-	public function putShort($i) {
+    public function putShort($i) {
         $this->array[$this->currentOffset++] = $this->toByte($i >> 8);
         $this->array[$this->currentOffset++] = $this->toByte($i);
         return $this;
     }
 
     public function toByte($val) {
-    	return ((($val+128) % 256) - 128);
+        return ((($val+128) % 256) - 128);
     }
 
     public function setCurrentOffset($offset) {
-    	$this->currentOffset = $offset;
+        $this->currentOffset = $offset;
     }
 
     public function putByte($i) {
-    	$this->array[$this->currentOffset++] = $this->toByte($i);
+        $this->array[$this->currentOffset++] = $this->toByte($i);
         return $this;
-	}
+    }
 
     public function putInt($i) {
         $this->array[$this->currentOffset++] = $this->toByte($i >> 24);
@@ -219,11 +219,11 @@ Class Stream {
     }
 
     public function putString($s) {
-    	$max = currentOffset + strlen($s);
-    	for($i = $this->currentOffset; $i < $max; $i++) {
-    		$this->array[$this->currentOffset + $i] = $s[$i];
-    	}
-    	$this->currentOffset += strlen($s);
+        $max = currentOffset + strlen($s);
+        for($i = $this->currentOffset; $i < $max; $i++) {
+            $this->array[$this->currentOffset + $i] = $s[$i];
+        }
+        $this->currentOffset += strlen($s);
         $this->array[$this->currentOffset++] = 10;
         return $this;
     }
@@ -260,15 +260,15 @@ Class Stream {
     }
 
     public function toLong($val) {
-    	return (($val + 1) / 2);
+        return $val;
     }
- 
+
     public function getString() {
-        $string = "";
+        $i = $this->currentOffset;
+        $string = '';
         while($this->array[$this->currentOffset++] != 10) {
             $string .= chr($this->array[$this->currentOffset - 1]);
         }
-        //var_dump($string);
         return $string;
     }
 

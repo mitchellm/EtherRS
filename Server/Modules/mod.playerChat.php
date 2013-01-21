@@ -6,8 +6,7 @@ class playerChat extends \Server\Server {
 
 	public function __construct(\Server\Server $server) {}
 	
-	public function __onLogin(array $args) {
-		$player = $args[1];
+	public function __onLogin($method_name, $player) {
 		$ip = $player->getIP();
 		$this->log($player->getUsername() . ' has logged in from ' . $ip['ip'] . ':' . $ip['port']);
 	}

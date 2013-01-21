@@ -9,7 +9,7 @@ class SQL extends Server {
 	public function __construct() {
 		try {
 			$this->conn = new \PDO('mysql:host='.SQL_HOST.';dbname='.SQL_DB, SQL_USER, SQL_PASS);
-			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		} catch(\PDOException $e) {
 			$this->log($e->getMessage(), true, 2);
 		}

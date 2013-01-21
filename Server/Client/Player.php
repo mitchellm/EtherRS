@@ -171,6 +171,7 @@ class Player extends \Server\Server {
 		$clientHalf = $this->inStream->getInt();
 		$serverHalf = $this->inStream->getInt();
 
+		$this->inStream->setCurrentOffset($this->inStream->getCurrentOffset() + 8);
 		$username = strtolower($this->inStream->getString());
 		$password = $this->inStream->getString();
 

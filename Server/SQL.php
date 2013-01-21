@@ -8,8 +8,8 @@ class SQL extends Server {
 
 	public function __construct() {
 		try {
-			$this->conn = new \PDO('mysql:host=localhost;dbname=etherrs', 'root', '');
-			$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+			$this->conn = new \PDO('mysql:host='.SQL_HOST.';dbname='.SQL_DB, SQL_USER, SQL_PASS);
+			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch(\PDOException $e) {
 			$this->log($e->getMessage(), true, 2);
 		}
@@ -28,27 +28,24 @@ class SQL extends Server {
 	 *
 	 */
 	public function getCount($table, array $columns, array $values) {
-		if($this->conn == false) {
+		/*if($this->conn == false) {
 			$this->log(__METHOD__ . ': No SQL connection');
 			return false;
-		}
+		}*/
 		if(count($columns) != count($values)) {
 			throw new \Exception(__METHOD__ . ': Unmatching column and value arrays');
 		}
-
-		$sql = "SELECT COUNT(*) FROM ";
-		$sql .= "{$table} WHERE ";
-
-		$count = count($columns);
-
-		for($x = 0; $x < $count; $x++) {
-			$sql .= " `{$columns[$x]}` = ? ";
-			$x != $count -1 ? $sql .= "AND" : false;
+		$sql = '';
+		foreach($columns as $column) {
+			$sql .= '`' . $column . '` = ? AND ';
 		}
-		$stmt = $this->conn->prepare($sql);
-		$stmt->execute($values);
-		$rs = $stmt->fetch(\PDO::FETCH_ASSOC);
-		return $rs["COUNT(*)"];
+		$sql = substr($sql, 0, -5);
+		$sql = 'SELECT COUNT(*) as `rows` FROM ' . $table . ' WHERE ' . $sql;
+		$this->conn->prepare($sql);
+		$this->conn->execute($values);
+		$rs = $this->conn->fetch(\PDO::FETCH_ASSOC);
+		
+		return $rs['rows'];
 	}
 	
 	/**

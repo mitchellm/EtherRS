@@ -28,10 +28,10 @@ class SQL extends Server {
 	 *
 	 */
 	public function getCount($table, array $columns, array $values) {
-		/*if($this->conn == false) {
+		if($this->conn == false) {
 			$this->log(__METHOD__ . ': No SQL connection');
 			return false;
-		}*/
+		}
 		if(count($columns) != count($values)) {
 			throw new \Exception(__METHOD__ . ': Unmatching column and value arrays');
 		}
@@ -41,9 +41,9 @@ class SQL extends Server {
 		}
 		$sql = substr($sql, 0, -5);
 		$sql = 'SELECT COUNT(*) as `rows` FROM ' . $table . ' WHERE ' . $sql;
-		$this->conn->prepare($sql);
-		$this->conn->execute($values);
-		$rs = $this->conn->fetch(\PDO::FETCH_ASSOC);
+		$query = $this->conn->prepare($sql);
+		$query->execute($values);
+		$rs = $query->fetch(\PDO::FETCH_ASSOC);
 		
 		return $rs['rows'];
 	}

@@ -11,13 +11,54 @@ namespace Server;
 */
 
 Class Stream {
-    public $currentOffset = 1;
-    public $array = array(), $bit_mask_out = array();
+    public $currentOffset = 1, $bitPosition;
+    public $array = array(), $bitMaskOut = array();
 
     public function __construct() {
         for($x = 0; $x < 32; $x++) {
-            $this->bit_mask_out[$x] = (1 << $x) - 1;
+            $this->bitMaskOut[$x] = (1 << $x) - 1;
         }
+    }
+    
+    public function putBits($numBits, $value) {
+        if($numBits < 0 || $numBits > 32) {
+            throw new \Exception('Number of bits must be between 0 & 32!');
+        }
+        
+        $bytePos = $this->getBitPosition() >> 3;
+        $bitOffset = 8 - ($this->getBitPosition() & 7);
+        $this->setBitPosition($this->getBitPosition() + $value);
+        
+        for(; $numBits > $bitOffset; $bitOffset = 8) {
+            $this->array[$bytePos] &= ~$this->bitMaskOut[$bitOffset];
+            $this->array[$bytePos++] |= ($value >> ($numBits - $bitOffset)) & $bitMaskOut[$bitOffset];
+            
+            $numBits -= $bitOffset;
+        }
+        if($numBits == $bitOffset) {
+            $this->array[$bytePos] &= ~$this->bitMaskOut[$bitOffset];
+            $this->array[$bytePos] |= $value & $this->bitMaskOut[$bitOffset];
+        } else {
+            $this->array[$bytePos] &= ~($this->bitMaskOut[$numBits] << ($bitOffset - $numBits)); 
+            $this->array[$bytePos] |= ($value & $this->bitMaskOut[$numBits]) << ($bitOffset - $numBits);
+        }
+        return $this;
+    }
+    
+    public function iniBitAccess() {
+        $this->bitPosition = $this->currentOffset * 8;
+    }
+    
+    public function finishBitAccess() {
+        $this->currentOffset = ($this->bitPosition + 7) / 8;
+    }
+    
+    public function setBitPosition($x) {
+        $this->bitPosition = $x;
+    }
+    
+    public function getBitPosition() {
+        return $this->bitPosition;
     }
 
     public function putVariableShortPacketHeader($isaac, $val) {

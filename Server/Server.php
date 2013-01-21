@@ -133,6 +133,15 @@ class Server {
 	}
 
 	/**
+	*
+	* @return Client\PlayerHandler Instance
+	*
+	*/
+	public function getPlayerHandler() {
+		return $this->playerHandler;
+	}
+
+	/**
 	 *
 	 * @return array
 	 *

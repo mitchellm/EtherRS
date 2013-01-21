@@ -68,5 +68,39 @@ class PlayerHandler extends \Server\Server {
 	public function getPlayers() {
 		return $this->players;
 	}
+	
+	public function updateLocalMovement(\Server\Client\Player $player, \Server\Stream $out) {
+	$updateRequired = false;
+		if(true) {
+			$out->putBit(true);
+			$x = 400;
+			$y = 400;
+			$this->appendPlacement($out,  $x, $y, 1, true, true);
+		} else {
+			$primaryDirection = -1;
+			$secondaryDirection = -1;
+			if($primaryDirection != -1) {
+				$out->writeBit(true);
+				if($secondaryDirection != -1) {
+					$this->appendRun($out, $primaryDirection, $secondaryDirection, $updateRequired);
+				} else {
+					$this->appendWalk($out, $primaryDirection, $updateRequired);
+				}
+			}
+		}	
+	}
+	
+	public function appendRun(\Server\Stream $out, $primaryDirection, $secondaryDirection, $updateRequired) {}
+	
+	public function appendWalk(\Server\Stream $out, $primaryDirection, $updateRequired) {}
+	
+	public function appendPlacement(\Server\Stream $out, $x, $y, $z, $discardMovementQueue, $attributesUpdate) {
+			$out->writeBits(2, 3);
+			$out->writeBits(2, $z);
+			$out->writeBit($discardMovementQueue);
+			$out->writeBit($attributesUpdate);
+			$out->writeBits(7, $y);
+			$out->writeBits(7, $x);
+	}
 }
 ?>

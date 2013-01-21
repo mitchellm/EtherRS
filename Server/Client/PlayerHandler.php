@@ -22,9 +22,7 @@ class PlayerHandler extends \Server\Server {
 	 * 
 	 */
 	public function add($socket, \Server\Server $server, \Server\SQL $sql) {
-		$player = new Player($socket, $this->active_sessions, $server, $sql);
-		$this->active_sessions++;
-		$this->players[] = $player;
+		$player = new Player($socket, $this->active_sessions, $server, $sql, $this);
 		$server->handleModules('__onConnect', $socket, $this);
 	}
 
@@ -35,16 +33,17 @@ class PlayerHandler extends \Server\Server {
 	 */
 	protected function cycleEvent() {
 		$playerCount = count($this->players);
+		$this->players = array_values($this->players);
+
 		for($x = 0; $x < $playerCount; $x++) {
-			if(!isset($this->players[$x]))
+			if(!isset($this->players[$x])) {
 				continue;
+			}
 
-			if(is_null($this->players[$x])) 
-				continue;
-
-			if(time() - $this->players[$x]->getLastPacket() > 10) {
+			if(time() - $this->players[$x]->getLastPacket() > 120) {
 				socket_close($this->players[$x]->getConnection());
 				$this->log('Closing ' . $this->players[$x]->getUsername() .'\'s connection');
+				$this->active_sessions--;
 				unset($this->players[$x]);
 				continue;
 			}
@@ -53,11 +52,17 @@ class PlayerHandler extends \Server\Server {
 			if(socket_last_error($this->players[$x]->connection) != 0) {
 				$this->active_sessions--;
 				$this->players[$x] = null;
-				//$this->log($x);
+				unset($this->players[$x]);
 			}
 		}
-		$this->players = array_filter($this->players);
-		//var_dump($this->players);
+	}
+
+	public function modActiveSessions($number) {
+		$this->active_sessions += intval($number);
+	}
+
+	public function addPlayer(Player $player) {
+		$this->players[] = $player;
 	}
 
 	public function getPlayers() {

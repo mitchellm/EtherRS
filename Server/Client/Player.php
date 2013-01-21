@@ -17,10 +17,11 @@ class Player extends \Server\Server {
 	protected $lastPacket;
 	protected $username, $password;
 	public $connection;
+	private $player_handler;
 
 	protected $encryptor, $decryptor;
 
-	public function __construct($socket, $active_session, \Server\Server $server, \Server\SQL $sql) {
+	public function __construct($socket, $active_session, \Server\Server $server, \Server\SQL $sql, PlayerHandler $player_handler) {
 		$this->connection = $socket;
 		$this->session = $active_session;
 		$this->server = $server;
@@ -29,8 +30,11 @@ class Player extends \Server\Server {
 		$this->outStream = new \Server\Stream();
 		$this->inStream = new \Server\Stream();
 
+		$this->playerHandler = $player_handler;
+
 		$this->run();
 	}
+
 
 	/**
 	 *
@@ -63,9 +67,12 @@ class Player extends \Server\Server {
 	 */
 	private function read($bytes) {
 		$this->inStream->clear();
-		$data = socket_read($this->connection, $bytes, PHP_BINARY_READ);
-		if($data > 0 && $data != false) 
+		$data = @socket_read($this->connection, $bytes, PHP_BINARY_READ);
+		if($data != false) 
 			$this->lastPacket = time();
+		if(!$data) {
+			$this->log(socket_last_error($this->connection));
+		}
 		$data = unpack('C*', $data);
 		return $data;
 	}
@@ -196,8 +203,12 @@ class Player extends \Server\Server {
 	private function login() {
 		$response = 0;
 
-		$exists = $this->sql->getCount("players", array('username', 'password'), 
-			array($this->getUsername(), $this->getPassword()));
+		try {
+			$exists = $this->sql->getCount("players", array('username', 'password'), 
+				array($this->getUsername(), $this->getPassword()));
+		} catch(\PDOException $e) {
+			$this->log($e->getMessage());
+		}
 
 		if($exists == 1) {
 			$response = 2;
@@ -210,7 +221,7 @@ class Player extends \Server\Server {
 			if($player == null) {
 				continue;
 			}
-			if($player->getUsername() == $this->getUsername()) {
+			if( strtolower($player->getUsername()) == strtolower($this->getUsername()) ) {
 				$response = 5;
 				break;
 			}
@@ -232,7 +243,13 @@ class Player extends \Server\Server {
 		$stream = $this->outStream->getStream();
 		$this->write($stream);
 
-			
+		if($response == 2) {
+			$this->playerHandler->modActiveSessions(1);
+			$this->playerHandler->addPlayer($this);
+		}
+
+		unset($this->playerHandler);
+
 		$this->server->handleModules('__onLogin', $this);
 	}
 

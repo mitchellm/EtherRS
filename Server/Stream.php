@@ -11,7 +11,7 @@ namespace Server;
 */
 
 Class Stream {
-    public $currentOffset = 1, $bitPosition;
+    public $currentOffset = 1, $bitPosition = 1;
     public $array = array(), $bitMaskOut = array();
 
     public function __construct() {
@@ -31,7 +31,7 @@ Class Stream {
         
         for(; $numBits > $bitOffset; $bitOffset = 8) {
             $this->array[$bytePos] &= ~$this->bitMaskOut[$bitOffset];
-            $this->array[$bytePos++] |= ($value >> ($numBits - $bitOffset)) & $bitMaskOut[$bitOffset];
+            $this->array[$bytePos++] |= ($value >> ($numBits - $bitOffset)) & $this->bitMaskOut[$bitOffset];
             
             $numBits -= $bitOffset;
         }
@@ -39,6 +39,7 @@ Class Stream {
             $this->array[$bytePos] &= ~$this->bitMaskOut[$bitOffset];
             $this->array[$bytePos] |= $value & $this->bitMaskOut[$bitOffset];
         } else {
+            echo isset($this->array[$bytePos]) ? 'true' : 'false';
             $this->array[$bytePos] &= ~($this->bitMaskOut[$numBits] << ($bitOffset - $numBits)); 
             $this->array[$bytePos] |= ($value & $this->bitMaskOut[$numBits]) << ($bitOffset - $numBits);
         }
@@ -164,34 +165,12 @@ Class Stream {
     } 
 
     public function appendStand() {
-        $this->writeBits(2, 0);
+        $this->putBits(2, 0);
         return $this;
     }
 
     public function putBit($bool) {
-        $this->writeBits(1, $bool ? 1 : 0);
-        return $this;
-    }
-
-    public function putBits($numBits, $val) {
-        $bytes = ceil((double) $numBits / 8) + 1;
-        $bytePos = $this->currentOffset >> 3;
-        $bitOffset = 8 - ($this->currentOffset & 7);
-        $this->currentOffset += $numBits;
-
-        for(; $numBits < $this->currentOffset; $this->currentOffset = 8) {
-            $this->array[$bytePos] &= ~$this->bit_mask_out[$bitOffset];
-            $this->array[$bytePos++] |= ($val >>  ($numBits-$this->currentOffset)) & $this->bit_mask_out[$bitOffset];
-            $numBits -= $bitOffset;
-        }
-
-        if($numBit == $bitOffset) {
-            $this->array[$bytePos] &= ~$this->bit_mask_out[$bitOffset];
-            $this->array[$bytePos] |= $val &  $this->bit_mask_out[$bitOffset];
-        } else {
-            $this->array[$bytePos] &= ~($this->bit_mask_out[$numBits] << ($bitOffset - $numBits));
-            $this->array[$bytePos] |= ($val & $this->bit_mask_out[$numBits]) << ($bitOffset - $numBits);
-        }
+        $this->putBits(1, $bool ? 1 : 0);
         return $this;
     }
 

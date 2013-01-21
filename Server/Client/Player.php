@@ -97,6 +97,11 @@ class Player extends \Server\Server {
 		$this->password = $s;
 	}
 
+	public function writeStream() {
+		$stream = $this->outStream->getStream();
+		$this->write($stream);
+	}
+
 	/**
 	 * 
 	 * Entire login method. Follows STD protocol.
@@ -105,7 +110,6 @@ class Player extends \Server\Server {
 	private function run() {
 		socket_set_block($this->connection);
 		$serverHalf = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
-		$clientHalf = 0;
 
 		$data = $this->read(2);
 		$this->inStream->setStream($data);
@@ -123,11 +127,9 @@ class Player extends \Server\Server {
 		$this->write(chr(0));
 
 		$this->outStream->clear();
+
 		$this->outStream->putLong($serverHalf);
-
-		$stream = $this->outStream->getStream();
-
-		$ssk = $this->write($stream);
+		$this->writeStream();
 
 		$data = $this->read(2);
 		$this->inStream->setStream($data);
@@ -174,23 +176,23 @@ class Player extends \Server\Server {
 			$this->log("Encrypt packet Id was " . $tmp . " but expected 10");
 		}
 
+		$a1 = $this->inStream->getInt();
+		$a2 = $this->inStream->getInt();
+		$a3 = $this->inStream->getInt();
+		$a4 = $this->inStream->getInt();
 		$uid = $this->inStream->getInt();
-		$clientHalf = $this->inStream->getInt();
-		$serverHalf = $this->inStream->getInt();
-
-		$this->inStream->setCurrentOffset($this->inStream->getCurrentOffset() + 8);
+		
 		$username = strtolower($this->inStream->getString());
 		$password = $this->inStream->getString();
 
+		$this->log($username);
 		$this->setUsername($username);
 		$this->setPassword($password);
 
 		$this->outStream->clear();
 
-		$isaacSeed = array(intval($clientHalf >> 32), intval($clientHalf), intval($serverHalf >> 32), intval($serverHalf));
-		//$this->log($clientHalf . " " . $serverHalf);
-		$this->log('CLIENT HALF: ' . $clientHalf);
-		$this->log('SERVER HALF: ' . $serverHalf);
+		$isaacSeed = array($a1, $a2, $a3, $a4);
+
 		$this->setDecryptor(new \Server\Cryption\ISAAC($isaacSeed));
 		for($i = 0; $i < count($isaacSeed); $i++) {
 			$isaacSeed[$i] += 50;
@@ -228,16 +230,13 @@ class Player extends \Server\Server {
 		}		
 
 		$this->outStream->putByte($response)->putByte(0)->putByte(0);
-		$stream = $this->outStream->getStream();
-		$this->write($stream);
+		$this->writeStream();
 
 		$this->outStream->putHeader($this->getEncryptor(), 249)->putByteA(0)->putLEShortA(0);
-		$stream = $this->outStream->getStream();
-		$this->write($stream);
+		$this->writeStream();
 
 		$this->outStream->putHeader($this->getEncryptor(), 107);
-		$stream = $this->outStream->getStream();
-		$this->write($stream);
+		$this->writeStream();
 
 		$this->outStream->putHeader($this->getEncryptor(), 73)->putShortA(400)->putShort(400);
 		$stream = $this->outStream->getStream();
@@ -249,7 +248,27 @@ class Player extends \Server\Server {
 		}
 
 		unset($this->playerHandler);
+		
+		$this->writeStream();
+		
+		$this->outStream->putVariableShortPacketHeader($this->getEncryptor(), 81);
+		$this->writeStream();
+		
+		/*$this->outStream->setAccessType(true);*/
+		$this->outStream->iniBitAccess();
+		$this->outStream->putBit(false)->putBits(8, 0)->putBits(11, 2047);
+		$this->writeStream();
+		$this->outStream->finishBitAccess();
 
+		// $this->outStream->iniBitAccess();
+		// $this->outStream->putBits(1, 0)->putBits(8, 1)->putBits(11, 2047);
+		// $this->outStream->finishBitAccess();
+		// $this->outStream->putByte(0);
+		// $this->writeStream();
+		
+		
+		//$this->server->getPlayerHandler()->updateLocalMovement($this, $this->outStream);
+		
 		$this->server->handleModules('__onLogin', $this);
 	}
 

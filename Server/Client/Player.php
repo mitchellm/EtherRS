@@ -261,6 +261,14 @@ class Player extends \Server\Server {
 		return $this->password;
 	}
 
+	public function getLastPacket() {
+		return $this->lastPacket;
+	}
+
+	public function getConnection() {
+		return $this->connection;
+	}
+
 	public function getIP() {
 		socket_getpeername($this->connection, $ip, $port);
 		return array('ip' => $ip, 'port' => $port);

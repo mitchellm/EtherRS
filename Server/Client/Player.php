@@ -167,10 +167,9 @@ class Player extends \Server\Server {
 			$this->log("Encrypt packet Id was " . $tmp . " but expected 10");
 		}
 
-		$clientHalf = 53955325; //$this->inStream->getLong();
-		$this->inStream->getLong();
-		$serverHalf = $this->inStream->getLong();
 		$uid = $this->inStream->getInt();
+		$clientHalf = $this->inStream->getInt();
+		$serverHalf = $this->inStream->getInt();
 
 		$username = strtolower($this->inStream->getString());
 		$password = $this->inStream->getString();
@@ -182,6 +181,8 @@ class Player extends \Server\Server {
 
 		$isaacSeed = array(intval($clientHalf >> 32), intval($clientHalf), intval($serverHalf >> 32), intval($serverHalf));
 		//$this->log($clientHalf . " " . $serverHalf);
+		$this->log('CLIENT HALF: ' . $clientHalf);
+		$this->log('SERVER HALF: ' . $serverHalf);
 		$this->setDecryptor(new \Server\Cryption\ISAAC($isaacSeed));
 		for($i = 0; $i < count($isaacSeed); $i++) {
 			$isaacSeed[$i] += 50;

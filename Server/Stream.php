@@ -13,35 +13,78 @@ namespace Server;
 Class Stream {
     public $currentOffset = 1, $bitPosition = 1;
     public $array = array(), $bitMaskOut = array();
+    public $packetType;
+    public $packetStart;
+
+    public $SERVER_PACKET_SIZES = array(
+        0, 0, 0, 0, 6, 0, 0, 0, 4, 0, 
+        0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, -2, 4, 3, 0, 0, 0, 
+        0, 0, 0, 0, 5, 0, 0, 6, 0, 0, 
+        10, 0, 0, -2, 0, 0, 0, 0, 0, 0, 
+        -2, 1, 0, 0, 2, -2, 0, 0, 0, 0, 
+        6, 3, 2, 4, 2, 4, 0, 0, 0, 4, 
+        0, -2, 0, 0, 7, 2, 0, 6, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 
+        0, 2, 0, 0, -1, 4, 1, 0, 0, 0, 
+        1, -1, 0, 0, 2, 0, 0, 15, 0, 0, 
+        0, 4, 4, 0, 0, 0, -2, -2, 0, 0, 
+        0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 
+        0, 0, 2, 0, 0, 0, 0, 14, 0, 0, 
+        0, 4, 0, 0, 0, 0, 3, 0, 0, 0, 
+        4, 0, 0, 0, 2, 0, 6, 0, 0, 0, 
+        0, 3, 0, 0, 5, 0, 10, 6, 0, 0, 
+        0, 0, 0, 0, 0, 2, 0, 0, -2, 3, 
+        -2, 0, 0, 0, 0, 0, -1, 0, 0, 0, 
+        4, 0, 0, 0, 0, 0, 3, 0, 2, 0, 
+        0, 0, 0, 0, -2, 7, 0, 0, 2, 0, 
+        0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+        8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        2, -2, 0, 0, 0, 0, 6, 0, 4, 3, 
+        0, 0, 0, -1, 6, 0
+    );
 
     public function __construct() {
         for($x = 0; $x < 32; $x++) {
             $this->bitMaskOut[$x] = (1 << $x) - 1;
         }
+
+        $this->array = array_fill(0, 5000, 0);
     }
     
-    public function putBits($numBits, $value) {
-        if($numBits < 0 || $numBits > 32) {
-            throw new \Exception('Number of bits must be between 0 & 32!');
-        }
-        
-        $bytePos = $this->getBitPosition() >> 3;
-        $bitOffset = 8 - ($this->getBitPosition() & 7);
-        $this->setBitPosition($this->getBitPosition() + $value);
-        
-        for(; $numBits > $bitOffset; $bitOffset = 8) {
-            $this->array[$bytePos] &= ~$this->bitMaskOut[$bitOffset];
-            $this->array[$bytePos++] |= ($value >> ($numBits - $bitOffset)) & $this->bitMaskOut[$bitOffset];
+    public function putBits($bits, $val) {
+        if($bits <= 0 || $bits > 32)
+            return;
             
-            $numBits -= $bitOffset;
+        $bitPos = $this->bitPosition;
+        $pos = $bitPos >> 3;
+        $bitPos &= 0x7;
+        if($bitPos != 0) {
+            $n = 8 - $bitPos;
+            if($n > $bits) 
+                $n = $bits;
+                
+            $mask = (1 << $n) - 1;
+            $b = $this->array[$pos] & 0xff;
+            $this->array[$pos] = (($b & ($mask << $bitPos)) | ($val & $mask));
+            $this->bitPosition += $n;
+            
+            if($n == $bits)
+                return;
+                
+            ++$pos;
+            $val >>= $n;
+            $bits -= $n;
         }
-        if($numBits == $bitOffset) {
-            $this->array[$bytePos] &= ~$this->bitMaskOut[$bitOffset];
-            $this->array[$bytePos] |= $value & $this->bitMaskOut[$bitOffset];
-        } else {
-            echo isset($this->array[$bytePos]) ? 'true' : 'false';
-            $this->array[$bytePos] &= ~($this->bitMaskOut[$numBits] << ($bitOffset - $numBits)); 
-            $this->array[$bytePos] |= ($value & $this->bitMaskOut[$numBits]) << ($bitOffset - $numBits);
+        while($bits > 0) {
+            $m = $bits;
+            if ($m > 8)
+                $m = 8;
+            $this->array[$pos++] = $val;
+            $val >>= $m;
+            $bits -= $m;
+            $this->bitPosition += $m;
         }
         return $this;
     }
@@ -51,7 +94,7 @@ Class Stream {
     }
     
     public function finishBitAccess() {
-        $this->currentOffset = ($this->bitPosition + 7) / 8;
+        $this->currentOffset = intval(($this->bitPosition + 7) / 8);
     }
     
     public function setBitPosition($x) {
@@ -62,9 +105,42 @@ Class Stream {
         return $this->bitPosition;
     }
 
-    public function putVariableShortPacketHeader($isaac, $val) {
+    public function beginPacket($isaac, $val) {
+        $type = $this->SERVER_PACKET_SIZES[$val];
         $this->putHeader($isaac, $val);
-        $this->putShort(0);
+        if ($type < 0)
+            $type = -$type;
+        else
+            $type = 0;
+
+         $this->packetType = $type;
+         $this->putPacketSize($type, 0);
+         $this->packetStart = $this->currentOffset;
+    }
+
+    public function putPacketSize($type, $size)
+    {
+        $size = intval($size);
+        echo "\n Type: " . $type . " - Size: " . $size . " \n";
+        if ($type == 0) //Do nothing
+            ;
+        else if ($size < 0 || $size >= 1 << ($type << 3))
+            die("invalid $size");
+        else if ($type == 1)
+            $this->putByte($size);
+        else if ($type == 2)
+            $this->putShort($size);
+        else
+            die("invalid $type");
+
+    }
+
+    public function finishPacket()
+    {
+        $tmp = $this->currentOffset;
+        $this->currentOffset = $this->packetStart - $this->packetType;
+        $this->putPacketSize($this->packetType, $tmp - $this->packetStart);
+        $this->currentOffset = $tmp;
     }
 
     public function packData($resource) {

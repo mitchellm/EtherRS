@@ -250,21 +250,17 @@ class Player extends \Server\Server {
 		unset($this->playerHandler);
 		
 		$this->writeStream();
-		
-		$this->outStream->putVariableShortPacketHeader($this->getEncryptor(), 81);
-		$this->writeStream();
-		
-		/*$this->outStream->setAccessType(true);*/
-		$this->outStream->iniBitAccess();
-		$this->outStream->putBit(false)->putBits(8, 0)->putBits(11, 2047);
-		$this->writeStream();
-		$this->outStream->finishBitAccess();
 
-		// $this->outStream->iniBitAccess();
-		// $this->outStream->putBits(1, 0)->putBits(8, 1)->putBits(11, 2047);
-		// $this->outStream->finishBitAccess();
-		// $this->outStream->putByte(0);
-		// $this->writeStream();
+		$this->outStream->beginPacket($this->getEncryptor(), 81);
+		$this->outStream->iniBitAccess();
+
+		$this->outStream->putBits(1, 0)->putBits(8, 0);
+
+		$this->outStream->finishBitAccess();
+		$this->outStream->putByte(0);
+
+		$this->outStream->finishPacket();
+		$this->writeStream();
 		
 		
 		//$this->server->getPlayerHandler()->updateLocalMovement($this, $this->outStream);

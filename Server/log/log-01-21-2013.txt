@@ -74,3 +74,19 @@
 [SERVER] Finished loading all server modules, the server will continue running!
 [SERVER] mopar
 [SERVER] mopar has logged in from 127.0.0.1:60696
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar
+[SERVER] mopar has logged in from 127.0.0.1:60966
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar
+[SERVER] mopar has logged in from 127.0.0.1:61175
+[SERVER] EtherRS running and attempting to bind and listen on port 43594...
+[SERVER] SQL initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar
+[SERVER] mopar has logged in from 127.0.0.1:62955

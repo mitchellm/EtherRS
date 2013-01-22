@@ -240,11 +240,6 @@ Class Stream {
         return $this;
     } 
 
-    public function appendStand() {
-        $this->putBits(2, 0);
-        return $this;
-    }
-
     public function putBit($bool) {
         $this->putBits(1, $bool ? 1 : 0);
         return $this;

@@ -89,17 +89,17 @@ class Player extends \Server\Server {
 		socket_write($this->connection, $s);
 	}
 
+	public function writeStream() {
+		$stream = $this->outStream->getStream();
+		$this->write($stream);
+	}
+
 	public function setUsername($s) {
 		$this->username = $s;
 	}
 
 	public function setPassword($s) {
 		$this->password = $s;
-	}
-
-	public function writeStream() {
-		$stream = $this->outStream->getStream();
-		$this->write($stream);
 	}
 
 	/**
@@ -244,26 +244,12 @@ class Player extends \Server\Server {
 
 		if($response == 2) {
 			$this->playerHandler->modActiveSessions(1);
-			$this->playerHandler->addPlayer($this);
+			$this->playerHandler->addConnection($this);
 		}
 
-		unset($this->playerHandler);
-		
 		$this->writeStream();
 
-		$this->outStream->beginPacket($this->getEncryptor(), 81);
-		$this->outStream->iniBitAccess();
-
-		$this->outStream->putBits(1, 0)->putBits(8, 0);
-
-		$this->outStream->finishBitAccess();
-		$this->outStream->putByte(0);
-
-		$this->outStream->finishPacket();
-		$this->writeStream();
-		
-		
-		//$this->server->getPlayerHandler()->updateLocalMovement($this, $this->outStream);
+		$this->server->playerHandler->update($this, $this->outStream, $this->getEncryptor());
 		
 		$this->server->handleModules('__onLogin', $this);
 	}

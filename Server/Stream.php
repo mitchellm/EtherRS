@@ -12,7 +12,7 @@ namespace Server;
 
 Class Stream {
     public $currentOffset = 1, $bitPosition = 1;
-    public $array = array(), $bitMaskOut = array();
+    public $array = array();
     public $packetType;
     public $packetStart;
 
@@ -46,10 +46,6 @@ Class Stream {
     );
 
     public function __construct() {
-        for($x = 0; $x < 32; $x++) {
-            $this->bitMaskOut[$x] = (1 << $x) - 1;
-        }
-
         $this->array = array_fill(0, 5000, 0);
     }
     

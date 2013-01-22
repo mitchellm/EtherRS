@@ -1,3 +1,4 @@
+@title EtherRS Running
 @echo off
 REM Change this to your PHP directory
 cd C:\xampp\php

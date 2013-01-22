@@ -2,6 +2,7 @@
 namespace Server\Client;
 
 require_once('Stream.php');
+require_once('PlayerUpdate.php');
 require(__DIR__ . "\..\Cryption\ISAAC.php");
 /**
  * @category RSPS
@@ -18,6 +19,7 @@ class Player extends \Server\Server {
 	protected $username, $password;
 	public $connection;
 	private $player_handler;
+	protected $updater;
 
 	protected $encryptor, $decryptor;
 
@@ -31,7 +33,6 @@ class Player extends \Server\Server {
 		$this->inStream = new \Server\Stream();
 
 		$this->playerHandler = $player_handler;
-
 		$this->run();
 	}
 
@@ -198,7 +199,7 @@ class Player extends \Server\Server {
 			$isaacSeed[$i] += 50;
 		}
 		$this->setEncryptor(new \Server\Cryption\ISAAC($isaacSeed));
-
+		$this->update = new PlayerUpdate($this);
 		$this->login();
 	}
 
@@ -244,12 +245,13 @@ class Player extends \Server\Server {
 
 		if($response == 2) {
 			$this->playerHandler->modActiveSessions(1);
-			$this->playerHandler->addConnection($this);
+			$this->playerHandler->addPlayer($this);
 		}
 
 		$this->writeStream();
 
-		$this->server->playerHandler->update($this, $this->outStream, $this->getEncryptor());
+		$this->update->sendBlock();
+		//$this->server->playerHandler->update($this, $this->outStream, $this->getEncryptor());
 		
 		$this->server->handleModules('__onLogin', $this);
 	}
@@ -262,11 +264,11 @@ class Player extends \Server\Server {
 		$this->decryptor = $isaac;
 	}
 
-	protected function getEncryptor() {
+	public function getEncryptor() {
 		return $this->encryptor;
 	}
 
-	protected function getDecryptor() {
+	public function getDecryptor() {
 		return $this->decryptor;
 	}
 

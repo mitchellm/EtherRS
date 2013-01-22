@@ -17,10 +17,10 @@ require_once('Client/Player.php');
 require_once("SQL.php");
 
 class Server {
-	protected $socket, $bytes, $raw;
+	protected $server, $bytes, $raw;
 	protected $sql;
 
-	protected $playerHandler, $player;
+	protected $playerHandler, $player, $socket;
 
 	private $modules = array();
 
@@ -29,16 +29,17 @@ class Server {
 			throw new \Exception('You need sockets enabled to use this!');
 		}
 		$this->log('EtherRS running and attempting to bind and listen on port ' . SERVER_PORT . '...');
-		$this->socket = @socket_create(AF_INET, SOCK_STREAM, 0);
-		$bind = @socket_bind($this->socket, 0, SERVER_PORT);
-		$listen = @socket_listen($this->socket);
-		socket_set_nonblock($this->socket);
-		if(!$this->socket || !$bind || !$listen) {
+		$this->server = @socket_create(AF_INET, SOCK_STREAM, 0);
+		$bind = @socket_bind($this->server, 0, SERVER_PORT);
+		$listen = @socket_listen($this->server);
+		socket_set_nonblock($this->server);
+		if(!$this->server || !$bind || !$listen) {
 			throw new \Exception('Could not bind to ' . SERVER_PORT);
 		}
 		
 		$this->playerHandler = new Client\PlayerHandler();
 		$this->sql = new SQL();
+		$this->socket = new Networking\Socket();
 
 		$this->loadModules();
 		$this->start();
@@ -106,7 +107,7 @@ class Server {
 	 */
 	private function start() {
 		$cycleTimed = 0;
-		while($this->socket) {
+		while($this->server) {
 			$cycleStart = time();
 
 			$this->cycle();
@@ -124,7 +125,7 @@ class Server {
 	private function cycle() {
 	 	//Listen for and process a new client, runs 10 times per cycle. Limited to prevent abuse 
 		for($i = 0; $i < 10; $i++) {
-			$client = @socket_accept($this->socket);
+			$client = @socket_accept($this->server);
 			if(!($client == false)) {
 				$this->playerHandler->add($client, $this, $this->sql);
 			}

@@ -1,9 +1,9 @@
 <?php
 namespace Server\Client;
 
-require_once('Stream.php');
-require_once('PlayerUpdate.php');
-require(__DIR__ . "\..\Cryption\ISAAC.php");
+require 'PlayerUpdate.php';
+require 'Cryption/ISAAC.php';
+
 /**
  * @category RSPS
  * @package EtherRS
@@ -21,21 +21,25 @@ class Player extends \Server\Server {
 	private $player_handler;
 	protected $updater;
 
-	protected $socket;
+	public $socket;
 
 	protected $encryptor, $decryptor;
 
-	public function __construct($socket, $active_session, \Server\Server $server, \Server\SQL $sql, PlayerHandler $player_handler) {
+	public function __construct($socket, $active_session, \Server\Server $server, \Server\Network\SQL $sql, PlayerHandler $player_handler) {
 		$this->connection = $socket;
 		$this->session = $active_session;
 		$this->server = $server;
 		$this->sql = $sql;
 
-		$this->outStream = new \Server\Stream();
-		$this->inStream = new \Server\Stream();
+		$this->outStream = new \Server\Network\Stream();
+		$this->inStream = new \Server\Network\Stream();
 
 		$this->socket = $server->getSocket();
+		$this->socket->addStream($this->inStream, $this->outStream, $active_session + 1, true);
+		$this->socket->addSocket($socket, $active_session + 1, true);
+
 		$this->playerHandler = $player_handler;
+		$this->handleModules('__newPlayer', $this, $player_handler);
 		$this->run();
 	}
 
@@ -47,8 +51,7 @@ class Player extends \Server\Server {
 	private function run() {
 		socket_set_block($this->connection);
 		$serverHalf = ((((mt_rand(1, 100)/100) * 99999999) << 32) + ((mt_rand(1, 100)/100) * 99999999));
-
-		$data = $this->read(2);
+		$data = $this->socket->read(2);
 		$this->inStream->setStream($data);
 
 		if($this->inStream->getUnsignedByte() != 14) {
@@ -59,16 +62,16 @@ class Player extends \Server\Server {
 
 		$namePart = $this->inStream->getUnsignedByte();
 		for($x = 0; $x < 8; $x++) {
-			$this->write(chr(0));
+			$this->socket->write(chr(0));
 		}
-		$this->write(chr(0));
+		$this->socket->write(chr(0));
 
 		$this->outStream->clear();
 
 		$this->outStream->putLong($serverHalf);
-		$this->writeStream();
+		$this->socket->writeStream();
 
-		$data = $this->read(2);
+		$data = $this->socket->read(2);
 		$this->inStream->setStream($data);
 		
 		$loginType = $this->inStream->getUnsignedByte();
@@ -85,7 +88,7 @@ class Player extends \Server\Server {
 			return;
 		}
 
-		$data = $this->read($loginPacketSize);
+		$data = $this->socket->read($loginPacketSize);
 		$this->inStream->setStream($data);
 
 		$m1 = $this->inStream->getUnsignedByte();
@@ -166,24 +169,24 @@ class Player extends \Server\Server {
 		}		
 
 		$this->outStream->putByte($response)->putByte(0)->putByte(0);
-		$this->writeStream();
+		$this->socket->writeStream();
 
 		$this->outStream->putHeader($this->getEncryptor(), 249)->putByteA(0)->putLEShortA(0);
-		$this->writeStream();
+		$this->socket->writeStream();
 
 		$this->outStream->putHeader($this->getEncryptor(), 107);
-		$this->writeStream();
+		$this->socket->writeStream();
 
 		$this->outStream->putHeader($this->getEncryptor(), 73)->putShortA(400)->putShort(400);
 		$stream = $this->outStream->getStream();
-		$this->write($stream);
+		$this->socket->write($stream);
 
 		if($response == 2) {
 			$this->playerHandler->modActiveSessions(1);
 			$this->playerHandler->addPlayer($this);
 		}
 
-		$this->writeStream();
+		$this->socket->writeStream();
 
 		$this->update->sendBlock();
 		//$this->server->playerHandler->update($this, $this->outStream, $this->getEncryptor());

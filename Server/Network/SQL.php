@@ -1,9 +1,9 @@
 <?php
-namespace Server;
+namespace Server\Network;
 
-require_once(__DIR__ . '/config.Server.php');
+require_once(ROOT_DIR . '/data/config.Server.php');
 
-class SQL extends Server {
+class SQL extends \Server\Server {
 	protected $conn;
 
 	public function __construct() {

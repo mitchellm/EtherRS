@@ -1,1035 +1,182 @@
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:49571
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:49586
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:49625
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:49681
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:49758
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:53413
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:53449
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:53537
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:53563
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:53731
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 4
-[SERVER] current offset 9.875
-[SERVER] mopar has logged in from 127.0.0.1:53768
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9.875
-[SERVER] mopar has logged in from 127.0.0.1:53834
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] asdf has logged in from 127.0.0.1:2575
+[SERVER] asdf has logged in from 127.0.0.1:2771
+[SERVER] asdf has logged in from 127.0.0.1:2773
+[SERVER] asdf has logged in from 127.0.0.1:2774
+[SERVER] asdf has logged in from 127.0.0.1:2775
+[SERVER] asdf has logged in from 127.0.0.1:2776
+[SERVER] asdf has logged in from 127.0.0.1:2778
+[SERVER] asdf has logged in from 127.0.0.1:2779
+[SERVER] asdf has logged in from 127.0.0.1:2780
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:53969
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54099
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54103
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54107
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54108
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54115
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54122
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 9
-[SERVER] mopar has logged in from 127.0.0.1:54123
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[SERVER] SQL connection initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] mopar has logged in from 127.0.0.1:54881
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] mopar has logged in from 127.0.0.1:54904
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] mopar has logged in from 127.0.0.1:54994
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 8
-[SERVER] mopar has logged in from 127.0.0.1:55020
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 8
-[SERVER] mopar has logged in from 127.0.0.1:55130
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 8
-[SERVER] mopar has logged in from 127.0.0.1:55222
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 8
-[SERVER] mopar has logged in from 127.0.0.1:55279
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] current offset 1
-[SERVER] current offset 8
-[SERVER] mopar has logged in from 127.0.0.1:55307
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:55358
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:55363
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:55368
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57450
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57479
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57499
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57506
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57565
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57568
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57595
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:57788
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:60999
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61002
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61005
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61006
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61019
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61021
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61022
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61100
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61113
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61114
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61122
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61125
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61126
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61127
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61132
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61135
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61137
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61138
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61142
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61152
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61153
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61154
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61160
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61161
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61173
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61186
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61189
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61192
-[SERVER] mopar
+[SERVER] mopar has logged in from 127.0.0.1:61187
+[SERVER] Closing mopar's connection
+[SERVER] mopar has logged in from 127.0.0.1:61188
+[SERVER] Closing mopar's connection
 [SERVER] mopar has logged in from 127.0.0.1:61193
-[SERVER] mopar
+[SERVER] Closing mopar's connection
 [SERVER] mopar has logged in from 127.0.0.1:61196
-[SERVER] mopar
+[SERVER] Closing mopar's connection
 [SERVER] mopar has logged in from 127.0.0.1:61197
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61200
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61201
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61204
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61205
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61208
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61209
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61212
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61213
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61214
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61217
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61220
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61221
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61224
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61225
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61228
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61229
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61230
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61233
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61236
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61237
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61238
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61241
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61253
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61266
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61270
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61273
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61274
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61277
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61278
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61281
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61283
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61291
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61292
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61295
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61296
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61302
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61304
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61313
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61317
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61324
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61325
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61328
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61329
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61340
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61346
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61367
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61378
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61381
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61383
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61386
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61389
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61392
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61395
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61397
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61400
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61401
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61403
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61406
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61407
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61410
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61411
-[SERVER] mopar
+[SERVER] Closing mopar's connection
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar has logged in from 127.0.0.1:61207
+[SERVER] Closing mopar's connection
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar has logged in from 127.0.0.1:61354
+[SERVER] Closing mopar's connection
+[SERVER] mopar has logged in from 127.0.0.1:61357
+[SERVER] Closing mopar's connection
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
+[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] mopar has logged in from 127.0.0.1:61390
+[SERVER] Closing mopar's connection
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
+[SERVER] Finished loading all server modules, the server will continue running!
 [SERVER] mopar has logged in from 127.0.0.1:61414
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61415
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61418
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61422
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61425
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61428
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61431
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61432
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61433
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61436
-[SERVER] mopar
+[SERVER] Closing mopar's connection
+[SERVER] EtherRS running...
+[SERVER] Attempting to bind and listen on port 43594...
+[SERVER] SQL connection initialized
+[SERVER] Socket server initialized
+[SERVER] Finished loading all server modules, the server will continue running!
 [SERVER] mopar has logged in from 127.0.0.1:61439
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61440
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61441
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61444
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61447
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61448
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61449
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61453
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61456
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61457
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61459
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61462
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61465
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61466
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61468
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61471
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61474
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61476
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61477
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61480
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61481
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61484
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61485
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61488
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61491
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61494
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61495
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61498
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61499
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61502
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61503
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61504
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61507
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61508
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61511
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61512
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61516
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61522
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61523
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61526
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61531
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61533
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61536
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61537
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61538
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61541
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61544
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61545
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61548
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61549
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61552
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61553
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61556
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61559
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61560
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61561
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61564
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61566
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61569
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61570
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61573
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61574
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61577
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61578
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61579
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61582
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61583
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61587
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61588
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61591
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61594
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61595
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61609
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61614
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61617
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61618
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61621
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61622
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61625
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61626
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61630
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61633
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61634
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61637
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61640
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61651
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61654
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61655
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61658
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61661
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61663
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61664
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61672
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61676
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61677
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61682
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61683
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61686
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61688
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61689
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61693
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61696
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61697
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61698
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61702
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61704
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61708
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61709
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61712
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61715
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61716
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61720
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61721
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61724
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61733
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61741
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61744
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61751
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61754
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61756
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61759
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61760
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61763
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61769
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61774
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61777
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61778
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61781
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61782
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61785
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61787
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61788
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61791
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61794
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61795
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61799
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61801
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61804
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61805
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61808
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61811
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61816
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61819
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61820
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61821
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61825
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61830
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61832
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61845
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61848
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61873
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61879
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61881
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61885
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61888
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61890
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61894
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61899
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61909
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61910
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61915
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61917
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61921
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61922
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61923
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61926
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61931
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61936
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61939
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61942
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61945
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61947
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61950
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61954
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61959
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61961
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61964
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61968
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61969
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61970
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61973
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61974
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61977
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61978
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61982
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:61985
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62013
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62026
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62031
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62035
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62037
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62038
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62041
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62044
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62046
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62050
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62051
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62054
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62055
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62058
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62059
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62062
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62064
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62067
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62068
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62071
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62072
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62075
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62078
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62079
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62082
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62087
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62088
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62089
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62092
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62095
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62096
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62112
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62118
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62119
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62120
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62123
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62126
-[SERVER] mopar
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running and attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
+[SERVER] Closing mopar's connection
 [SERVER] EtherRS running...
 [SERVER] Attempting to bind and listen on port 43594...
 [SERVER] SQL connection initialized
 [SERVER] Socket server initialized
 [SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62367
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62370
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62372
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62373
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62376
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62379
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] Called!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62385
-[SERVER] Called!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62388
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] Called!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62411
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] Called!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62428
-[SERVER] Called!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62432
-[SERVER] Called!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62433
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar
-[SERVER] mopar has logged in from 127.0.0.1:62449
-[SERVER] mopar
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] mopar has logged in from 127.0.0.1:62471
-[SERVER] mopar has logged in from 127.0.0.1:62474
-[SERVER] mopar has logged in from 127.0.0.1:62477
-[SERVER] mopar has logged in from 127.0.0.1:62478
-[SERVER] EtherRS running...
-[SERVER] Attempting to bind and listen on port 43594...
-[SERVER] SQL connection initialized
-[SERVER] Socket server initialized
-[SERVER] Finished loading all server modules, the server will continue running!
-[SERVER] Called!
-[SERVER] mopar has logged in from 127.0.0.1:62533
-[SERVER] Called!
-[SERVER] mopar has logged in from 127.0.0.1:62534
+[SERVER] mopar has logged in from 127.0.0.1:61927
+[SERVER] Closing mopar's connection

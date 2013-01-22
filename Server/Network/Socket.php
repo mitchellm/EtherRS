@@ -5,9 +5,9 @@ class Socket extends \Server\Server {
 	protected $currentStream, $activeStreams = array();
 	protected $currentSocket, $activeSockets = array();
 
-	public function __construct(Stream $stream = null, $conn = null, $name = null) {
-		if($stream != null) {
-			$this->addStream($stream, $name, true);
+	public function __construct(Stream $inStream = null, Stream $outStream = null, $conn = null, $name = null) {
+		if(isset($stream) && $stream != null) {
+			$this->addStream($inStream, $outStream, $name, true);
 		}
 
 		if(is_resource($conn)) {
@@ -25,12 +25,12 @@ class Socket extends \Server\Server {
 	 * @param int    $bytes How many bytes to read
 	 *
 	 */
-	public function read($name = null, $bytes) {
+	public function read($bytes, $name = null) {
 		if($name === null) {
-			$this->currentStream->clear();
+			$this->currentStream[0]->clear();
 			$data = @socket_read($this->currentSocket, $bytes, PHP_BINARY_READ);
 		} else {
-			$this->activeStreams[$name]->clear();
+			$this->activeStreams[$name][0]->clear();
 			$data = @socket_read($this->activeSockets[$name], $bytes, PHP_BINARY_READ);
 		}
 		if(!$data) {
@@ -48,9 +48,9 @@ class Socket extends \Server\Server {
 	 * @param mixed  $data The data to write
 	 *
 	 */
-	public function write($name = null, $data) {
+	public function write($data, $name = null) {
 		if($name === null) {
-			$this->currentStream()->clear();
+			$this->currentStream[1]->clear();
 			socket_write($this->currentSocket, $data);
 		} else {
 			if(!is_resource($this->activeSockets[$name])) {
@@ -69,13 +69,13 @@ class Socket extends \Server\Server {
 	 */
 	public function writeStream($name = null) {
 		if($name === null) {
-			$stream = $this->currentStream->getStream();
+			$stream = $this->currentStream[1]->getStream();
 			$this->write($stream);
 		} else {
 			if(!isset($this->activeStreams[$name])) {
 				throw new Exception(__METHOD__ . ': Not a valid stream');
 			}
-			$stream = $this->activeStreams[$name]->getStream();
+			$stream = $this->activeStreams[$name][1]->getStream();
 			$this->write($stream);
 		}
 	}
@@ -114,15 +114,15 @@ class Socket extends \Server\Server {
 	 * @param bool   $setActive Should we use this stream as the current one?
 	 *
 	 */
-	public function addStream(Stream $stream, $name = null, $setActive = false) {
+	public function addStream(Stream $inStream, Stream $outStream, $name = null, $setActive = false) {
 		if($name !== null) {
-			$this->activeStreams[$name] = $stream;
+			$this->activeStreams[$name] = array($inStream, $outStream);
 		} else {
-			$this->activeStreams[] = $stream;
+			$this->activeStreams[] = array($inStream, $outStream);
 		}
 
 		if($setActive === true) {
-			$this->currentStream = $stream;
+			$this->currentStream = array($inStream, $outStream);
 		}
 	}
 

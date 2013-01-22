@@ -1,5 +1,5 @@
 <?php
-namespace Server;
+namespace Server\Network;
 
 /**
 * @category RSPS

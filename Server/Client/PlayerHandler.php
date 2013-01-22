@@ -21,7 +21,7 @@ class PlayerHandler extends \Server\Server {
 	 * Add a client to the handler
 	 * 
 	 */
-	public function add($socket, \Server\Server $server, \Server\SQL $sql) {
+	public function add($socket, \Server\Server $server, \Server\Network\SQL $sql) {
 		$player = new Player($socket, $this->active_sessions, $server, $sql, $this);
 		$server->handleModules('__onConnect', $socket, $this);
 	}

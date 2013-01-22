@@ -1,8 +1,6 @@
 <?php
 namespace Server\Client;
 
-require_once('Stream.php');
-require_once('PlayerHandler.php');
 /**
  * @category RSPS
  * @package EtherRS
@@ -23,7 +21,7 @@ class PlayerUpdate extends \Server\Client\PlayerHandler {
 	}
 
 	public function sendBlock() {
-		$this->block = new \Server\Stream();
+		$this->block = new \Server\Network\Stream();
 		$players = $this->getPlayers();
 		
 		$this->out->beginPacket($this->enc, 81);
@@ -34,7 +32,7 @@ class PlayerUpdate extends \Server\Client\PlayerHandler {
 		//		PlayerUpdating.updateState(false, true);
 		//	}
 		
-		$this->out->putBits(8, 0);
+		$this->out->putBits(8, 1);
 		foreach($players as $plr) {
 			if(false) {
 				//	PlayerUpdating.updateOtherPlayerMovement(other, out);
@@ -69,7 +67,10 @@ class PlayerUpdate extends \Server\Client\PlayerHandler {
 		}
 		
 		$this->out->finishPacket();
+		socket_write($this->player->connection, $this->player->getOutstream()->getStream());
+		socket_write($this->player->connection, $this->block->getStream());
 		//needs to be written to the socket
+
 	}
 	
 	public function updateState($forceAppearance, $noChat) {

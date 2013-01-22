@@ -10,12 +10,14 @@ namespace Server;
  */
 
 chdir(__DIR__);
-require_once('config.Server.php');
-require_once('Stream.php');
-require_once('Client/PlayerHandler.php');
-require_once('Client/Player.php');
-require_once("SQL.php");
-require_once("Network/Socket.php");
+define('ROOT_DIR', __DIR__);
+
+require 'data/config.Server.php';
+require 'Client/PlayerHandler.php';
+require 'Client/Player.php';
+require 'Network/SQL.php';
+require 'Network/Socket.php';
+require 'Network/Stream.php';
 
 class Server {
 	protected $server, $bytes, $raw;
@@ -40,7 +42,7 @@ class Server {
 		}
 		
 		$this->playerHandler = new Client\PlayerHandler();
-		$this->sql = new SQL();
+		$this->sql = new Network\SQL();
 		$this->socket = new Network\Socket();
 
 		$this->loadModules();
@@ -95,7 +97,6 @@ class Server {
 
 		foreach($modules as $module) {
 			if(method_exists($module, $handler)) {
-				//$module->$handler($args);
 				call_user_func_array(array($module, $handler), $args);
 			}
 		}
@@ -108,6 +109,7 @@ class Server {
 	 * 
 	 */
 	private function start() {
+		$this->handleModules('__beforeStart');
 		$cycleTimed = 0;
 		while($this->server) {
 			$cycleStart = time();
@@ -173,6 +175,15 @@ class Server {
 		if($log) {
 			file_put_contents('log/log-' . date('m-d-Y') .'.txt', $msg, FILE_APPEND);
 		}
+	}
+
+	/**
+	 *
+	 * Destructor. Issue clean up and __onUnload handler
+	 *
+	 */
+	public function __destruct() {
+		$this->handleModules('__onUnload', $this);
 	}
 }
 ?>

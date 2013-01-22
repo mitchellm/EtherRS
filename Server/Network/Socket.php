@@ -1,7 +1,7 @@
 <?php
 namespace Server\Network;
 
-class Sockets extends \Server\Server {
+class Socket extends \Server\Server {
 	protected $currentStream, $activeStreams = array();
 	protected $currentSocket, $activeSockets = array();
 
@@ -13,6 +13,7 @@ class Sockets extends \Server\Server {
 		if(is_resource($conn)) {
 			$this->addSocket($conn, $name, true);
 		}
+		$this->log("Socket server initialized");
 	}
 
 

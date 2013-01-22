@@ -15,6 +15,7 @@ require_once('Stream.php');
 require_once('Client/PlayerHandler.php');
 require_once('Client/Player.php');
 require_once("SQL.php");
+require_once("Network/Socket.php");
 
 class Server {
 	protected $server, $bytes, $raw;
@@ -28,7 +29,8 @@ class Server {
 		if(!extension_loaded('sockets')) {
 			throw new \Exception('You need sockets enabled to use this!');
 		}
-		$this->log('EtherRS running and attempting to bind and listen on port ' . SERVER_PORT . '...');
+		$this->log('EtherRS running...');
+		$this->log('Attempting to bind and listen on port ' . SERVER_PORT . '...');
 		$this->server = @socket_create(AF_INET, SOCK_STREAM, 0);
 		$bind = @socket_bind($this->server, 0, SERVER_PORT);
 		$listen = @socket_listen($this->server);
@@ -39,7 +41,7 @@ class Server {
 		
 		$this->playerHandler = new Client\PlayerHandler();
 		$this->sql = new SQL();
-		$this->socket = new Networking\Socket();
+		$this->socket = new Network\Socket();
 
 		$this->loadModules();
 		$this->start();
@@ -149,6 +151,15 @@ class Server {
 	 */
 	public function getModules() {
 		return $this->modules;
+	}
+
+	/**
+	 *
+	 * @return Server\Network\Socket
+	 *
+	 */
+	public function getSocket() {
+		return $this->socket;
 	}
 
 	/**

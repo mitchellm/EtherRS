@@ -21,6 +21,8 @@ class Player extends \Server\Server {
 	private $player_handler;
 	protected $updater;
 
+	protected $socket;
+
 	protected $encryptor, $decryptor;
 
 	public function __construct($socket, $active_session, \Server\Server $server, \Server\SQL $sql, PlayerHandler $player_handler) {
@@ -32,75 +34,9 @@ class Player extends \Server\Server {
 		$this->outStream = new \Server\Stream();
 		$this->inStream = new \Server\Stream();
 
+		$this->socket = $server->getSocket();
 		$this->playerHandler = $player_handler;
 		$this->run();
-	}
-
-
-	/**
-	 *
-	 * Get the current out stream
-	 *
-	 * @return Stream
-	 *
-	 */
-	public function getOutstream() {
-		return $this->outStream;
-	}
-
-	/**
-	 *
-	 * Get the current in stream
-	 *
-	 * @return Stream
-	 *
-	 */
-	public function getInstream() {
-		return $this->inStream;
-	}
-
-	/**
-	 * 
-	 * Read data from client
-	 * 
-	 * @param int $bytes Amount of data to read to the buffer
-	 * 
-	 */
-	private function read($bytes) {
-		$this->inStream->clear();
-		$data = @socket_read($this->connection, $bytes, PHP_BINARY_READ);
-		if($data != false) 
-			$this->lastPacket = time();
-		if(!$data) {
-			$this->log(socket_last_error($this->connection));
-		}
-		$data = unpack('C*', $data);
-		return $data;
-	}
-
-	/**
-	 *
-	 * Send data to a socket
-	 * 
-	 * @param mixed $s Data to be sent
-	 * 
-	 */
-	public function write($s) {
-		$this->outStream->clear();
-		socket_write($this->connection, $s);
-	}
-
-	public function writeStream() {
-		$stream = $this->outStream->getStream();
-		$this->write($stream);
-	}
-
-	public function setUsername($s) {
-		$this->username = $s;
-	}
-
-	public function setPassword($s) {
-		$this->password = $s;
 	}
 
 	/**
@@ -186,7 +122,6 @@ class Player extends \Server\Server {
 		$username = strtolower($this->inStream->getString());
 		$password = $this->inStream->getString();
 
-		$this->log($username);
 		$this->setUsername($username);
 		$this->setPassword($password);
 
@@ -254,6 +189,22 @@ class Player extends \Server\Server {
 		//$this->server->playerHandler->update($this, $this->outStream, $this->getEncryptor());
 		
 		$this->server->handleModules('__onLogin', $this);
+	}
+
+	public function getOutstream() {
+		return $this->outStream;
+	}
+
+	public function getInstream() {
+		return $this->inStream;
+	}
+
+	public function setUsername($s) {
+		$this->username = $s;
+	}
+
+	public function setPassword($s) {
+		$this->password = $s;
 	}
 
 	protected function setEncryptor($isaac) {

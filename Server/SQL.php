@@ -13,7 +13,7 @@ class SQL extends Server {
 		} catch(\PDOException $e) {
 			$this->log($e->getMessage(), true, 2);
 		}
-		$this->log('SQL initialized');
+		$this->log('SQL connection initialized');
 	}
 	
 	/**

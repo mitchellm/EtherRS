@@ -32,7 +32,7 @@ class PlayerUpdate extends \Server\Client\PlayerHandler {
 		//		PlayerUpdating.updateState(false, true);
 		//	}
 		
-		$this->out->putBits(8, 1);
+		$this->out->putBits(8, 0);
 		foreach($players as $plr) {
 			if(false) {
 				//	PlayerUpdating.updateOtherPlayerMovement(other, out);
@@ -67,10 +67,7 @@ class PlayerUpdate extends \Server\Client\PlayerHandler {
 		}
 		
 		$this->out->finishPacket();
-		socket_write($this->player->connection, $this->player->getOutstream()->getStream());
-		socket_write($this->player->connection, $this->block->getStream());
 		//needs to be written to the socket
-
 	}
 	
 	public function updateState($forceAppearance, $noChat) {

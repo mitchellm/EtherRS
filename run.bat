@@ -1,8 +1,8 @@
 @title EtherRS Running
 @echo off
 REM Change this to your PHP directory
-cd C:\xampp\php
+cd C:\wamp\bin\php\php5.4.3
 
 REM Change this to your run script.
-php C:\Users\mitchell\Documents\GitHub\EtherRS\run.php
+php C:\wamp\www\EtherRS\run.php
 pause

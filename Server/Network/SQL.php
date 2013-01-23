@@ -29,8 +29,7 @@ class SQL extends \Server\Server {
 	 */
 	public function getCount($table, array $columns, array $values) {
 		if($this->conn == false) {
-			$this->log(__METHOD__ . ': No SQL connection');
-			return false;
+			throw new \Exception(__METHOD__ . ': No SQL connection');
 		}
 		if(count($columns) != count($values)) {
 			throw new \Exception(__METHOD__ . ': Unmatching column and value arrays');

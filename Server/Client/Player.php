@@ -21,7 +21,7 @@ class Player extends \Server\Server {
 	private $player_handler;
 	protected $updater;
 
-	public $socket;
+	protected $socket;
 
 	protected $encryptor, $decryptor;
 

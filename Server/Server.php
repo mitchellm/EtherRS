@@ -59,10 +59,10 @@ class Server {
 	 */
 	private function loadModules($dir = null) {
 		if($dir === null) {
-			$dir = __DIR__;
+			$dir = __DIR__ . '/Modules';
 		}
 
-		$modules = glob($dir . '/Modules/mod.*.php');
+		$modules = glob($dir . '/mod.*.php');
 
 		if(count($modules) <= 0) {
 			return false;
@@ -72,7 +72,7 @@ class Server {
 			$module = basename($module);
 			$module = substr($module, 4);
 			$module = substr($module, 0, -4);
-			require_once($dir . '/Modules/mod.' . $module . '.php');
+			require_once($dir . '/mod.' . $module . '.php');
 			$class = '\Server\Modules\\' . $module; 
 			if(!class_exists($class)) {
 				throw new \Exception('Module ' . $class . ' failed to load -- Does the class name match the file name?');
@@ -169,11 +169,11 @@ class Server {
 	 * Write to STDOUT and append to log file
 	 *
 	 */
-	public function log($msg, $log = true) {
-		$msg = '[SERVER] ' . $msg . PHP_EOL;
+	public function log($msg, $log = true, $prefix = '[SERVER] ') {
+		$msg = $prefix . $msg . PHP_EOL;
 		echo $msg;
 		if($log) {
-			file_put_contents('log/log-' . date('m-d-Y') .'.txt', $msg, FILE_APPEND);
+			file_put_contents('log/log-' . date('d-m-Y') .'.txt', $msg, FILE_APPEND);
 		}
 	}
 
@@ -184,6 +184,10 @@ class Server {
 	 */
 	public function __destruct() {
 		$this->handleModules('__onUnload', $this);
+		$this->log('---------------------------');
+		if($this->socket) {
+			socket_close($this->socket);
+		}
 	}
 }
 ?>

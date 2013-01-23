@@ -6,7 +6,7 @@ class Socket extends \Server\Server {
 	protected $currentSocket, $activeSockets = array();
 
 	public function __construct(Stream $inStream = null, Stream $outStream = null, $conn = null, $name = null) {
-		if(isset($stream) && $stream != null) {
+		if($inStream != null && $outStream != null) {
 			$this->addStream($inStream, $outStream, $name, true);
 		}
 
